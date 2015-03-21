@@ -19,7 +19,9 @@ For this project, we went through everything including but not limited to:
 * Functional specification
 * GUI Design
 * Prototype
-* Usability Test
+* Usability Test & Analysis
 * Improvement for the prototype
 * Demonstration for our final Submission
 * Future improvement/plan
+
+This repository is NOT include the prototypes or the old versions of the project.
