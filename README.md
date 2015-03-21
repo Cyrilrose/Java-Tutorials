@@ -24,4 +24,4 @@ For this project, we went through everything including but not limited to:
 * Demonstration for our final Submission
 * Future improvement/plan
 
-This repository is NOT include the prototypes or the old versions of the project.
+This repository is NOT including the prototypes or the old versions of the project.
