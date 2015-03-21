@@ -1,6 +1,8 @@
 # Java-Tutorials
 ### September 2014 – December 2014
 ###### Group Work (four people in Multimedia course)
+Java Tutorials has several chapters from the Introduction of Java to 2D Arrays.
+Some chapters are followed by a simple game or video to help users learn Java Programming in various ways.
 Coded and designed by using **Adobe Creative Suite**.
 
 We used **Adobe Illustrator** and **Photoshop CC** to create and modify images,
