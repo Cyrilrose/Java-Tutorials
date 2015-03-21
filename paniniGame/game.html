@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Java Coding Practise</title>
+    <meta charset="UTF-8">
+  </head>
+  <style type="text/css">
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    body {
+        text-align: center;
+    }
+    #canvas {
+        margin: 0 auto;
+    }
+    .borderRadius1 {
+        border: 3px solid #f00;
+        border-radius: 7px 7px 7px 7px;
+    }
+    .borderRadius2 {
+        border: 3px solid #ccc;
+        border-radius: 7px 7px 7px 7px;
+    }
+    .borderRadius3 {
+        border: 3px solid #faa;
+        border-radius: 7px 7px 7px 7px;
+    }
+    .time{
+        font-size:33px;
+        font-family:"Times New Roman", Georgia, Serif;
+        font-weight:bold;
+        text-align:center;
+        vertical-align: middle;
+    
+    }
+    .question{
+        font-size:17px;
+        font-weight:normal;
+        text-align:left;
+        font-family:"Times New Roman", Georgia, Serif;
+        margin-left:5px;
+        margin-top:3px;
+    }
+    .answer{
+        color:red;
+        font-size:25px;
+        font-weight:bold;
+        font-family:"Times New Roman", Georgia, Serif;
+        text-align:center;
+    }
+    #gameQuestionPanel{
+        background: #ffffff;
+        border-color:#27A9E1;
+        border-radius: 10px 10px 10px 10px;
+    }
+    #timePanel{
+        background:#F7931D;
+        border: 0px solid #faa;
+        border-radius: 10px 10px 10px 10px;
+    }
+    .hide{
+        display:none;
+    }
+  </style>
+  <script src="./js/jquery.js" type="text/javascript" charset="UTF-8"></script>
+  <script src="./js/game.js"  type="text/javascript" charset="UTF-8"></script>
+  <script src="./js/timer.js" type="text/javascript" charset="UTF-8"></script>
+  <body>
+    <div id="mainDiv" >
+      <div style="position:absolute;top:20px;left:50px; height: 200px; width: 200px;">
+        <div id="logoPanel" style="height: 100px; width: 200px;">
+            <span id="logo" >
+                <img src="./img/logo.png" />
+            </span>
+        </div>
+        <div id="timePanel" style="height: 50px; width: 200px;">
+          <p>
+            <span id="clock" class="time"><kbd>03:00:00</kbd></span>
+          </p>
+        </div>
+        <div id="lifePanel" style="height: 60px; width: 200px;">
+          <img src='./img/heart_red.png' id='lifeheart1' height="60" width="60"/><img src='./img/heart_red.png' id='lifeheart1' height="60" width="60" /><img src='./img/heart_red.png' id='lifeheart1' height="60" width="60"/>
+        </div>
+        <div id="gameQuestionPanel" style="height: 163px; width: 200px;" class="borderRadius3"></div>
+        <div id="gameControlPanel" style="height: 100px; width: 200px; margin-top:15px;">
+          <img src="./img/startgame.png" id="startgame" />
+          <a href="burgerGameInstruction/panini_instruction.html"><img src="./img/howtoplay.png" id="howtoplay" style ="margin-top:7px;"/></a>
+        </div>
+      </div>
+      <div style="position:absolute;top:20px;left:260px;">
+        <canvas width='800px' height='500px' id="canvas" class="borderRadius2"></canvas>
+      </div>
+      <div id="flagPanel">
+          <input id="timeoutflag" type="text" value="false" style="display: none;" />
+      </div>
+    </div>
+  </body>
+</html>

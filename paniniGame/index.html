@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Java Coding Practise</title>
+    <meta charset="UTF-8">
+        <style type="text/css">
+            #bg
+            {
+                background: url(BACKGROUND.svg);
+                background-repeat: no-repeat;
+                background-size: 2000px 1053px;
+            }
+            </style>
+        <script type="text/javascript">
+            function changeIframePosition()
+            {
+                var left = window.innerWidth - 1100;
+                var top = window.innerHeight - 560;
+                left /= 2;
+                top /= 2;
+                
+                var elem = document.getElementById("iframe1");
+                elem.style.marginLeft = left + "px";
+                elem.style.marginTop = top + "px";
+            }
+            </script>
+  </head>
+  <body id = "bg" onload="changeIframePosition()" onresize="changeIframePosition()">
+      <iframe width="1100" height="560" id="iframe1" src="game.html" frameborder="0" scrolling="no" style="
+          background-color: white;"></iframe>
+  </body>
+</html>

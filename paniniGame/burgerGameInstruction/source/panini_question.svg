@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 200 300" enable-background="new 0 0 200 300" xml:space="preserve">
+<path fill="none" stroke="#27AAE1" stroke-width="2" stroke-miterlimit="10" d="M179,225.2c0,4.3-5.2,7.8-11.5,7.8H33
+	c-6.4,0-11.5-3.5-11.5-7.8V74.5c0-4.3,5.2-7.8,11.5-7.8h134.5c6.4,0,11.5,3.5,11.5,7.8V225.2z"/>
+<text transform="matrix(1 0 0 1 31.9999 86.0614)"><tspan x="0" y="0" font-family="'AmericanTypewriter-Bold'" font-size="13">Please collect</tspan><tspan x="0" y="15.6" font-family="'AmericanTypewriter-Bold'" font-size="13">statements which</tspan><tspan x="0" y="31.2" font-family="'AmericanTypewriter-Bold'" font-size="13">will generate this</tspan><tspan x="0" y="46.8" font-family="'AmericanTypewriter-Bold'" font-size="13">output:</tspan></text>
+<text transform="matrix(1 0 0 1 44 175.657)" fill="#BE1E2D" font-family="'AmericanTypewriter-Bold'" font-size="16">Hello World!</text>
+</svg>

@@ -1,0 +1,249 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Java Coding Practise</title>
+    <meta charset="UTF-8">
+  </head>
+  <style type="text/css">
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    body {
+        text-align: center;
+    }
+    #canvas {
+        margin: 0 auto;
+    }
+    .borderRadius1 {
+        border: 3px solid #f00;
+        border-radius: 7px 7px 7px 7px;
+    }
+    .borderRadius2 {
+        border: 3px solid #ccc;
+        border-radius: 7px 7px 7px 7px;
+    }
+    .borderRadius3 {
+        border: 3px solid #faa;
+        border-radius: 7px 7px 7px 7px;
+    }
+    .time {
+        font-size: 33px;
+        font-family: "Times New Roman", Georgia, Serif;
+        font-weight: bold;
+        text-align: center;
+        vertical-align: middle;
+    }
+    .question {
+        font-size: 17px;
+        font-weight: normal;
+        text-align: left;
+        font-family: "Times New Roman", Georgia, Serif;
+        margin-left: 5px;
+        margin-top: 3px;
+    }
+    .answer {
+        color: #FF0000;
+        font-size: 25px;
+        font-weight: bold;
+        font-family: "Times New Roman", Georgia, Serif;
+        text-align: center;
+    }
+    .note {
+        color: red;
+        font-size: 40px;
+        font-weight: bold;
+        font-family: "Times New Roman", Georgia, Serif;
+        text-align: center;
+    }
+    #gameQuestionPanel {
+        background: #ffffff;
+        border-color: #27A9E1;
+        border-radius: 10px 10px 10px 10px;
+    }
+    #timePanel {
+        background: #F7931D;
+        border: 0px solid #faa;
+        border-radius: 10px 10px 10px 10px;
+    }
+    #mainGamePanel {
+        height: 500px;
+        width: 800px;
+        position: absolute;
+        top: 20px;
+        left: 260px;
+        border: 5px solid #C9C9C9;
+        border-radius: 10px 10px 10px 10px;
+    }
+    .hide {
+        display: none;
+    }
+  </style>
+  <style>
+    .opacity0 {
+        opacity: 0;
+    }
+    .highlight {
+        box-shadow: 0 0 10px rgba(0,0,0,.8) !important;
+    }
+    .margCenter {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #gridWrap {
+        position: relative;
+        width: 350px;
+        height: 350px;
+        /*    box-shadow: 0 1px 5px rgba(0,0,0,.5);  */
+    }
+    #gridBgWrap {
+        position: absolute;
+        left: 30px;
+        top: 30px;
+        z-index: 2;
+    }
+    #gridFrontWrap {
+        position: relative;
+        z-index: 1;
+        display: none;
+    }
+    #gridWaffleWrap {
+        /*  position: relative; */
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
+    }
+    #gridFrontWrap {
+        position: relative;
+        z-index: 1;
+        display: none;
+    }
+    .grid {
+        float: left;
+        width: 50px;
+        height: 50px;
+        margin: 4px;
+    }
+    #thumbnailsWrap {
+        width: 350px;
+        height: 50px;
+        margin-top: 30px;
+        z-index: 5;
+    }
+    .thumbnails {
+        z-index: 3;
+        float: left;
+        width: 50px;
+        height: 50px;
+        margin-right: -1px;
+        font-size: 38px;
+        text-align: center;
+        line-height: 100px;
+        border: 0px solid #888;
+    }
+  </style>
+  <script src="./js/jquery-1.9.1.min.js"></script>
+  <script src="./js/jquery-ui-1.9.2.js"></script>
+  <script src="./js/jquery.ui.touch-punch.min.js"></script>
+  <script src="./js/timer.js"></script>
+  <script src="./js/game_array.js"  type="text/javascript" charset="UTF-8"></script>
+  <body>
+    <div id="mainDiv" >
+      <div style="position:absolute;top:20px;left:50px; height: 200px; width: 200px;">
+        <div id="logoPanel" style="height: 100px; width: 200px;">
+          <span id="logo" > <img src="./img/logo.png" /> </span>
+        </div>
+        <div id="timePanel" style="height: 50px; width: 200px;">
+          <p>
+            <span id="clock" class="time"><kbd>00:30:00</kbd></span>
+          </p>
+        </div>
+        <div id="lifePanel" style="height: 60px; width: 200px;">
+          <img src='./img/heart_red.png' id='lifeheart1' height="60" width="60"/><img src='./img/heart_red.png' id='lifeheart1' height="60" width="60" /><img src='./img/heart_red.png' id='lifeheart1' height="60" width="60"/>
+        </div>
+        <div id="gameQuestionPanel" style="height: 163px; width: 200px;" class="borderRadius3"></div>
+        <div id="gameControlPanel" style="height: 100px; width: 200px; margin-top:15px;">
+          <img src="./img/startgame.png" id="startgame" />
+          <a href="arrayGameInstruction/array_game_instruction.html"><img src="./img/howtoplay.png" id="howtoplay" style ="margin-top:7px;"/></a>
+        </div>
+      </div>
+      <div id="mainGamePanel" >
+        <!--
+        <canvas width='800px' height='500px' id="canvas" class="borderRadius2"></canvas>
+        -->
+        <div id="gridWrap" class="margCenter">
+          <div id="gridBgWrap">
+            <div id="grid1" class="grid" data-sign="[0][0]"></div>
+            <div id="grid2" class="grid" data-sign="[0][1]"></div>
+            <div id="grid1" class="grid" data-sign="[0][2]"></div>
+            <div id="grid2" class="grid" data-sign="[0][3]"></div>
+            <div id="grid2" class="grid" data-sign="[0][4]"></div>
+            <div id="grid3" class="grid" data-sign="[1][0]"></div>
+            <div id="grid4" class="grid" data-sign="[1][1]"></div>
+            <div id="grid3" class="grid" data-sign="[1][2]"></div>
+            <div id="grid4" class="grid" data-sign="[1][3]"></div>
+            <div id="grid4" class="grid" data-sign="[1][4]"></div>
+            <div id="grid5" class="grid" data-sign="[2][0]"></div>
+            <div id="grid6" class="grid" data-sign="[2][1]"></div>
+            <div id="grid5" class="grid" data-sign="[2][2]"></div>
+            <div id="grid6" class="grid" data-sign="[2][3]"></div>
+            <div id="grid6" class="grid" data-sign="[2][4]"></div>
+            <div id="grid5" class="grid" data-sign="[3][0]"></div>
+            <div id="grid6" class="grid" data-sign="[3][1]"></div>
+            <div id="grid5" class="grid" data-sign="[3][2]"></div>
+            <div id="grid6" class="grid" data-sign="[3][3]"></div>
+            <div id="grid6" class="grid" data-sign="[3][4]"></div>
+            <div id="grid5" class="grid" data-sign="[4][0]"></div>
+            <div id="grid6" class="grid" data-sign="[4][1]"></div>
+            <div id="grid5" class="grid" data-sign="[4][2]"></div>
+            <div id="grid6" class="grid" data-sign="[4][3]"></div>
+            <div id="grid6" class="grid" data-sign="[4][4]"></div>
+          </div>
+          <div id="gridFrontWrap">
+            <div class="grid">
+              <img src="img/bg.jpg" alt="" height="50px" width="50px">
+            </div>
+            <div class="grid">
+              <img src="img/bg.jpg" alt="" height="50px" width="50px">
+            </div>
+            <div class="grid">
+              <img src="img/bg.jpg" alt="" height="50px" width="50px">
+            </div>
+            <div class="grid">
+              <img src="img/bg.jpg" alt="" height="50px" width="50px">
+            </div>
+          </div>
+          <div id="gridWaffleWrap">
+            <img src="img/waffle.png" alt="" height="350px" width="350px" >
+          </div>
+        </div>
+        <div id="thumbnailsWrap" class="margCenter" style="background-color: #FFAAAAf">
+          <div class="thumbnails hide" data-sign="[2][3]" >
+            <img src="./img/blueberry.png" height="50" width="50" />
+          </div>
+          <div id="notePanel" style="width=300px; height:50px; " >
+            <p id="notes"></p>
+          </div>
+        </div>
+        <div id="flagPanel" class="opacity0">
+          <br />
+          position of the blue berry：
+          <input id="showselect" type="text" value="" style="width: 200px; " />
+          <br />
+          place postion：
+          <input id="blueberryPosition" type="text" value="" style="width: 200px; " />
+          <br />
+          status of the grid：
+          <input id="op" type="text" value="" style="width: 200px; " />
+          <br />
+          Status of the blueberry：
+          <input id="blueberryStatus" type="text" value="" style="width: 200px; " />
+          <br />
+          Problem：
+          <input id="questionTitle" type="text" value="" style="width: 200px; " />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<title>Java Tutorial Chapter 2</title>
+	<!--<meta name="author" content="Alvaro Trigo Lopez" />-->
+	<!--<meta name="description" content="multiscroll plugin by Alvaro Trigo. Create divided multi-scrolling pages with two splited vertical layouts or panels." />
+	<meta name="keywords"  content="multiscroll,jquery,alvaro,trigo,plugin,divided,splitscreen,screen,panels,layouts,vertical,split,splited" />
+	<meta name="Resource-type" content="Document" />-->
+
+	
+	<link rel="stylesheet" type="text/css" href="../jquery.multiscroll.css" />		
+	<link rel="stylesheet" type="text/css" href="Chapter2.css" />	
+	<link rel="stylesheet" media="screen and (max-width: 600px)" href="Chapter2.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript" src="../vendors/jquery.easings.min.js"></script>
+	<script type="text/javascript" src="../jquery.multiscroll.js"></script>
+
+	<script type="text/javascript">
+        $(document).ready
+        (function(){
+            $('#myContainer').multiscroll({
+            	sectionsColor: ['#CCCC33', '#FFFF99', '#CC9933', '#83D1FC', '#CC9966', 
+				'#CCCC66','#669999','#FFCC33'],
+            	anchors: ['first', 'second', 'third', 'fourth','fifth','sixth','seventh','eighth'],
+            	menu: '#menu',
+            	navigation: true,
+            	navigationTooltips: ['One', 'Two', 'Three', 'Four','Fifth','Sixth','Seventh','Eighth'],
+            	loopBottom: true,
+            	loopTop: true,
+				easing: 'easeOutBack'
+            });
+         changeCodeSize();
+         
+    
+        });
+        
+    function changeCodeSize()
+    {
+        
+        
+		changeCode2Size();
+		changeCode3Size();
+		changeCode4Size();
+		changeCode5Size();
+		changeCode6Size();
+		changeCode7Size();
+		changeCode8Size();
+		changeCode9Size();
+		changeCode10Size();
+		//changeOutputImageSize();
+		changeOutputImageSizeR3();
+		changeOutputImageSizeR5();
+		changeOutputImageSizeR7();
+    }
+    
+    function changeOutputImageSize()
+    {
+        var w = window.innerWidth / 2.5;
+        var h = w / 2.6;
+        
+        var elem = document.getElementById("outputImage");
+        elem.style.width = w + "px";
+        elem.style.height = h + "px";
+    }
+	function changeOutputImageSizeR3()
+    {
+        var w = window.innerWidth / 2.5;
+        var h = w / 2.6;
+        
+        var elem = document.getElementById("outputImager3");
+        elem.style.width = w + "px";
+        elem.style.height = h + "px";
+    }
+	function changeOutputImageSizeR5()
+    {
+        var w = window.innerWidth / 2.5;
+        var h = w / 2.6;
+        
+        var elem = document.getElementById("outputImager5");
+        elem.style.width = w + "px";
+        elem.style.height = h + "px";
+    }
+	function changeOutputImageSizeR7()
+    {
+        var w = window.innerWidth / 2.5;
+        var h = w / 2.6;
+        
+        var elem = document.getElementById("outputImager7");
+        elem.style.width = w + "px";
+        elem.style.height = h + "px";
+    }
+    
+    function changeCode2Size()
+    {
+        var w = window.innerWidth / 100;
+        var codeText = document.getElementById("codel2Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+	function changeCode3Size()
+    {
+        var w = window.innerWidth / 100;
+        var codeText = document.getElementById("codel3Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+	function changeCode4Size()
+    {
+        var w = window.innerWidth / 100;
+        var codeText = document.getElementById("codel4Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+	function changeCode5Size()
+    {
+        var w = window.innerWidth / 100;
+        var codeText = document.getElementById("codel5Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+	function changeCode6Size()
+    {
+        var w = window.innerWidth / 100;
+        var codeText = document.getElementById("codel6Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+	function changeCode7Size()
+    {
+        var w = window.innerWidth / 100;
+        var codeText = document.getElementById("codel7Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+	function changeCode8Size()
+    {
+        var w = window.innerWidth / 100;
+        var codeText = document.getElementById("coder2Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+	function changeCode9Size()
+    {
+        var w = window.innerWidth / 100;
+        var codeText = document.getElementById("coder4Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+	function changeCode10Size()
+    {
+        var w = window.innerWidth / 100;
+        var codeText = document.getElementById("coder6Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+    
+    </script>
+</head>
+<body onresize="changeCodeSize()">
+
+
+<ul id="menu">
+	<li data-menuanchor="first"><a href="#first">First slide</a></li>
+	<li data-menuanchor="second"><a href="#second">Second slide</a></li>
+	<li data-menuanchor="third"><a href="#third">Third slide</a></li>
+	<li data-menuanchor="fourth"><a href="#fourth">Fourth slide</a></li>
+	<li data-menuanchor="fifth"><a href="#fifth">Fifth slide</a></li>
+	<li data-menuanchor="sixth"><a href="#sixth">Sixth slide</a></li>
+	<li data-menuanchor="seventh"><a href="#seventh">Seventh slide</a></li>
+	<li data-menuanchor="eighth"><a href="#eighth">Eighth slide</a></li>
+</ul>
+
+<div id="myContainer">
+
+	<div class="ms-left">
+		<div class="ms-section" id="left1">
+			<div class="fullscreen">
+			<h1>Chapter 2</h1>
+			<br><br><br><br><br><br>
+			<h2>Data and Expressions</h2>
+			<img src="imgs/javaLogo.png" height="257" width="285">
+			</div>
+		</div>
+
+		<div class="ms-section" id="left2">
+		<table style='width:100%; padding-bottom:10%;'>
+			<tr><td style='padding:10%;'><h2>Variable Example</h2></td></tr>
+			<tr><td style='padding-left:10%;'><h3 style='text-align:left;'>class EggBasket</h3></td></tr>
+			<tr><td style='padding-left:10%;'>
+<pre id ="codel2Text" style='background:#FFFFFF; font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;'><strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>class</font></strong>&nbsp;EggBasket
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>static</font></strong>&nbsp;<strong><font color='#7f0055'>void</font></strong>&nbsp;main&nbsp;(String&nbsp;[]&nbsp;args)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>int</font></strong>&nbsp;numberOfBaskets,&nbsp;eggsPerBasket,&nbsp;totalEggs;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numberOfBaskets&nbsp;=&nbsp;10;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eggsPerBasket&nbsp;=&nbsp;6;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;totalEggs&nbsp;=&nbsp;numberOfBaskets&nbsp;*&nbsp;eggsPerBasket;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"If&nbsp;you&nbsp;have"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(eggsPerBasket&nbsp;+&nbsp;<font color='#2a00ff'>"&nbsp;eggs&nbsp;per&nbsp;basket&nbsp;and"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(numberOfBaskets&nbsp;+&nbsp;<font color='#2a00ff'>"&nbsp;baskets,&nbsp;then"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"the&nbsp;total&nbsp;number&nbsp;of&nbsp;eggs&nbsp;is&nbsp;"</font>&nbsp;+&nbsp;totalEggs);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}</pre></tr></td>
+		</table>
+		</div>
+
+		<div class="ms-section" id="left3">
+		<table style='width:100%; padding-bottom:10%;'>
+			<tr><td style='padding:10%;'><h2>Variable Example(Cont.)</h2></td></tr>
+			<tr><td style='padding-left:10%;'><h3 style='text-align:left;'>class EggBasket</h3></td></tr>
+			<tr><td style='padding-left:10%;'>
+<pre id ="codel3Text" style='background:#FFFFFF; font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;'><strong>
+<font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>class</font></strong>&nbsp;EggBasket
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>static</font></strong>&nbsp;<strong><font color='#7f0055'>void</font></strong>&nbsp;main&nbsp;(String&nbsp;[]&nbsp;args)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>int</font></strong>&nbsp;numberOfBaskets,&nbsp;eggsPerBasket,&nbsp;totalEggs;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numberOfBaskets&nbsp;=&nbsp;10;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eggsPerBasket&nbsp;=&nbsp;6;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;totalEggs&nbsp;=&nbsp;numberOfBaskets&nbsp;*&nbsp;eggsPerBasket;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"If&nbsp;you&nbsp;have"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(eggsPerBasket&nbsp;+&nbsp;<font color='#2a00ff'>"&nbsp;eggs&nbsp;per&nbsp;basket&nbsp;and"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(numberOfBaskets&nbsp;+&nbsp;<font color='#2a00ff'>"&nbsp;baskets,&nbsp;then"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"the&nbsp;total&nbsp;number&nbsp;of&nbsp;eggs&nbsp;is&nbsp;"</font>&nbsp;+&nbsp;totalEggs);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}</pre></td></tr>
+		</table>
+		</div>
+		
+		<div class="ms-section" id="left4">
+			<table style='width:100%; padding-bottom:10%;'>
+			<tr><td style='padding:10%;'><h2>Operator Example</h2></td></tr>
+			<tr><td style='padding-left:8%;'><h3 style='text-align:left;'>class ChangeMaker</h3></td></tr>
+			<tr><td style='padding-left:8%;'>
+			<pre id="codel4Text" style='background:#FFFFFF; font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;'><strong><font color='#7f0055'>import</font></strong>&nbsp;java.util.Scanner;
+ <strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>class</font></strong>&nbsp;ChangeMaker
+ {
+ &nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>static</font></strong>&nbsp;<strong><font color='#7f0055'>void</font></strong>&nbsp;main&nbsp;(String&nbsp;[]&nbsp;args)
+ &nbsp;&nbsp;&nbsp;&nbsp;{
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>int</font></strong>&nbsp;amount,&nbsp;originalAmount,
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quarters,&nbsp;dimes,&nbsp;nickels,&nbsp;pennies;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"Enter&nbsp;a&nbsp;whole&nbsp;number&nbsp;from&nbsp;1&nbsp;to&nbsp;99."</font>);
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"I&nbsp;will&nbsp;find&nbsp;a&nbsp;combination&nbsp;of&nbsp;coins"</font>);
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"that&nbsp;equals&nbsp;that&nbsp;amount&nbsp;of&nbsp;change."</font>);
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scanner&nbsp;keyboard&nbsp;=&nbsp;<strong><font color='#7f0055'>new</font></strong>&nbsp;Scanner&nbsp;(System.in);
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;amount&nbsp;=&nbsp;keyboard.nextInt&nbsp;();
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;originalAmount&nbsp;=&nbsp;amount;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quarters&nbsp;=&nbsp;amount&nbsp;/&nbsp;25;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;amount&nbsp;=&nbsp;amount&nbsp;%&nbsp;25;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dimes&nbsp;=&nbsp;amount&nbsp;/&nbsp;10;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;amount&nbsp;=&nbsp;amount&nbsp;%&nbsp;10;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nickels&nbsp;=&nbsp;amount&nbsp;/&nbsp;5;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;amount&nbsp;=&nbsp;amount&nbsp;%&nbsp;5;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pennies&nbsp;=&nbsp;amount;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(originalAmount&nbsp;+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color='#2a00ff'>"&nbsp;cents&nbsp;in&nbsp;coins&nbsp;can&nbsp;be&nbsp;given&nbsp;as:"</font>);
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(quarters&nbsp;+&nbsp;<font color='#2a00ff'>"&nbsp;quarters"</font>);
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(dimes&nbsp;+&nbsp;<font color='#2a00ff'>"&nbsp;dimes"</font>);
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(nickels&nbsp;+&nbsp;<font color='#2a00ff'>"&nbsp;nickels&nbsp;and"</font>);
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(pennies&nbsp;+&nbsp;<font color='#2a00ff'>"&nbsp;pennies"</font>);
+ &nbsp;&nbsp;&nbsp;&nbsp;}
+ }</pre>
+			</td></tr>
+			</table>			
+		</div>
+		<div class="ms-section" id="left5">
+			<table  style='width:100%; padding-bottom:10%;'>
+			<tr><td style='padding:10%;'><h2>Operator Example(Cont.)</h2></td></tr>
+			<tr><td style='padding-left:8%;'><h3 style='text-align:left;'>class ChangeMaker</h3></td></tr>
+			<tr><td style='padding-left:8%;'>
+			<pre id="codel5Text" style='background:#FFFFFF; font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;'><strong><font color='#7f0055'>import</font></strong>&nbsp;java.util.Scanner;
+ <strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>class</font></strong>&nbsp;ChangeMaker
+ {
+ &nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>static</font></strong>&nbsp;<strong><font color='#7f0055'>void</font></strong>&nbsp;main&nbsp;(String&nbsp;[]&nbsp;args)
+ &nbsp;&nbsp;&nbsp;&nbsp;{
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>int</font></strong>&nbsp;amount,&nbsp;originalAmount,
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quarters,&nbsp;dimes,&nbsp;nickels,&nbsp;pennies;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"Enter&nbsp;a&nbsp;whole&nbsp;number&nbsp;from&nbsp;1&nbsp;to&nbsp;99."</font>);
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"I&nbsp;will&nbsp;find&nbsp;a&nbsp;combination&nbsp;of&nbsp;coins"</font>);
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"that&nbsp;equals&nbsp;that&nbsp;amount&nbsp;of&nbsp;change."</font>);
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scanner&nbsp;keyboard&nbsp;=&nbsp;<strong><font color='#7f0055'>new</font></strong>&nbsp;Scanner&nbsp;(System.in);
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;amount&nbsp;=&nbsp;keyboard.nextInt&nbsp;();
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;originalAmount&nbsp;=&nbsp;amount;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quarters&nbsp;=&nbsp;amount&nbsp;/&nbsp;25;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;amount&nbsp;=&nbsp;amount&nbsp;%&nbsp;25;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dimes&nbsp;=&nbsp;amount&nbsp;/&nbsp;10;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;amount&nbsp;=&nbsp;amount&nbsp;%&nbsp;10;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nickels&nbsp;=&nbsp;amount&nbsp;/&nbsp;5;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;amount&nbsp;=&nbsp;amount&nbsp;%&nbsp;5;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pennies&nbsp;=&nbsp;amount;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(originalAmount&nbsp;+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color='#2a00ff'>"&nbsp;cents&nbsp;in&nbsp;coins&nbsp;can&nbsp;be&nbsp;given&nbsp;as:"</font>);
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(quarters&nbsp;+&nbsp;<font color='#2a00ff'>"&nbsp;quarters"</font>);
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(dimes&nbsp;+&nbsp;<font color='#2a00ff'>"&nbsp;dimes"</font>);
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(nickels&nbsp;+&nbsp;<font color='#2a00ff'>"&nbsp;nickels&nbsp;and"</font>);
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(pennies&nbsp;+&nbsp;<font color='#2a00ff'>"&nbsp;pennies"</font>);
+ &nbsp;&nbsp;&nbsp;&nbsp;}
+ }</pre>
+			</td></tr>
+			</table>		
+		</div>
+		
+		<div class="ms-section" id="left6">
+		<table  style='width:100%; padding-bottom:10%;'>
+			<tr><td style='padding:8%;'><h2>Scanner Example</h2></td></tr>
+			<tr><td style='padding-left:10%;'><h3 style='text-align:left;'>class ScannerDemo</h3></td></tr>
+			<tr><td style='padding-left:10%;'>
+			<pre id ="codel6Text" style='background:#FFFFFF; font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;'><strong><font color='#7f0055'>import</font></strong>&nbsp;java.util.Scanner;
+<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>class</font></strong>&nbsp;ScannerDemo
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>static</font></strong>&nbsp;<strong><font color='#7f0055'>void</font></strong>&nbsp;main&nbsp;(String&nbsp;[]&nbsp;args)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scanner&nbsp;keyboard&nbsp;=&nbsp;<strong><font color='#7f0055'>new</font></strong>&nbsp;Scanner&nbsp;(System.in);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"Enter&nbsp;two&nbsp;whole&nbsp;numbers"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"separated&nbsp;by&nbsp;one&nbsp;or&nbsp;more&nbsp;spaces:"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>int</font></strong>&nbsp;n1,&nbsp;n2;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n1&nbsp;=&nbsp;keyboard.nextInt&nbsp;();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n2&nbsp;=&nbsp;keyboard.nextInt&nbsp;();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"You&nbsp;entered&nbsp;"</font>&nbsp;+&nbsp;n1&nbsp;+&nbsp;<font color='#2a00ff'>"&nbsp;and&nbsp;"</font>&nbsp;+&nbsp;n2);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"Next&nbsp;enter&nbsp;two&nbsp;numbers."</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"A&nbsp;decimal&nbsp;point&nbsp;is&nbsp;OK."</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>double</font></strong>&nbsp;d1,&nbsp;d2;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d1&nbsp;=&nbsp;keyboard.nextDouble&nbsp;();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d2&nbsp;=&nbsp;keyboard.nextDouble&nbsp;();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"You&nbsp;entered&nbsp;"</font>&nbsp;+&nbsp;d1&nbsp;+&nbsp;<font color='#2a00ff'>"&nbsp;and&nbsp;"</font>&nbsp;+&nbsp;d2);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"Next&nbsp;enter&nbsp;two&nbsp;words:"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;s1,&nbsp;s2;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s1&nbsp;=&nbsp;keyboard.next&nbsp;();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s2&nbsp;=&nbsp;keyboard.next&nbsp;();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"You&nbsp;entered&nbsp;\"</font>"&nbsp;+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s1&nbsp;+&nbsp;<font color='#2a00ff'>"\"</font>&nbsp;and&nbsp;\<font color='#2a00ff'>""</font>&nbsp;+&nbsp;s2&nbsp;+&nbsp;<font color='#2a00ff'>"\"</font>");
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s1&nbsp;=&nbsp;keyboard.nextLine&nbsp;();&nbsp;<font color='#3f7f5f'>//To&nbsp;get&nbsp;rid&nbsp;of&nbsp;'\n'
+</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"Next&nbsp;enter&nbsp;a&nbsp;line&nbsp;of&nbsp;text:"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s1&nbsp;=&nbsp;keyboard.nextLine&nbsp;();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"You&nbsp;entered:&nbsp;\"</font><font color='#2a00ff'>"&nbsp;+&nbsp;s1&nbsp;+&nbsp;"</font>\<font color='#2a00ff'>""</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}
+</pre>
+			</td></tr>
+			</table>	
+		</div>
+		
+		<div class="ms-section" id="left7">
+		<table  style='width:100%; padding-bottom:10%;'>
+			<tr><td style='padding:8%;'><h2>Scanner Example(Cont.)</h2></td></tr>
+			<tr><td style='padding-left:10%;'><h3 style='text-align:left;'>class ScannerDemo</h3></td></tr>
+			<tr><td style='padding-left:10%;'>
+			<pre id ="codel7Text" style='background:#FFFFFF; font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;'><strong><font color='#7f0055'>import</font></strong>&nbsp;java.util.Scanner;
+<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>class</font></strong>&nbsp;ScannerDemo
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>static</font></strong>&nbsp;<strong><font color='#7f0055'>void</font></strong>&nbsp;main&nbsp;(String&nbsp;[]&nbsp;args)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scanner&nbsp;keyboard&nbsp;=&nbsp;<strong><font color='#7f0055'>new</font></strong>&nbsp;Scanner&nbsp;(System.in);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"Enter&nbsp;two&nbsp;whole&nbsp;numbers"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"separated&nbsp;by&nbsp;one&nbsp;or&nbsp;more&nbsp;spaces:"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>int</font></strong>&nbsp;n1,&nbsp;n2;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n1&nbsp;=&nbsp;keyboard.nextInt&nbsp;();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n2&nbsp;=&nbsp;keyboard.nextInt&nbsp;();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"You&nbsp;entered&nbsp;"</font>&nbsp;+&nbsp;n1&nbsp;+&nbsp;<font color='#2a00ff'>"&nbsp;and&nbsp;"</font>&nbsp;+&nbsp;n2);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"Next&nbsp;enter&nbsp;two&nbsp;numbers."</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"A&nbsp;decimal&nbsp;point&nbsp;is&nbsp;OK."</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>double</font></strong>&nbsp;d1,&nbsp;d2;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d1&nbsp;=&nbsp;keyboard.nextDouble&nbsp;();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d2&nbsp;=&nbsp;keyboard.nextDouble&nbsp;();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"You&nbsp;entered&nbsp;"</font>&nbsp;+&nbsp;d1&nbsp;+&nbsp;<font color='#2a00ff'>"&nbsp;and&nbsp;"</font>&nbsp;+&nbsp;d2);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"Next&nbsp;enter&nbsp;two&nbsp;words:"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;s1,&nbsp;s2;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s1&nbsp;=&nbsp;keyboard.next&nbsp;();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s2&nbsp;=&nbsp;keyboard.next&nbsp;();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"You&nbsp;entered&nbsp;\"</font>"&nbsp;+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s1&nbsp;+&nbsp;<font color='#2a00ff'>"\"</font>&nbsp;and&nbsp;\<font color='#2a00ff'>""</font>&nbsp;+&nbsp;s2&nbsp;+&nbsp;<font color='#2a00ff'>"\"</font>");
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s1&nbsp;=&nbsp;keyboard.nextLine&nbsp;();&nbsp;<font color='#3f7f5f'>//To&nbsp;get&nbsp;rid&nbsp;of&nbsp;'\n'
+</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"Next&nbsp;enter&nbsp;a&nbsp;line&nbsp;of&nbsp;text:"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s1&nbsp;=&nbsp;keyboard.nextLine&nbsp;();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"You&nbsp;entered:&nbsp;\"</font><font color='#2a00ff'>"&nbsp;+&nbsp;s1&nbsp;+&nbsp;"</font>\<font color='#2a00ff'>""</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}
+</pre>
+		</td></tr>
+		</table>	
+		</div>		
+	<div class="ms-section" id="left8">
+	<div class="fullscreen">
+			<h1>Chapter Practice Games</h1>
+			<a href="../../anGame/AlienAttack.html"><img src="imgs/game jack-o1.jpg" height="398" width="600"></a>
+			<br><div id="download"><a href="../../title page.html">Home</a></div>
+			</div>
+	</div>	
+	
+	</div>
+	
+	<div class="ms-right">
+		<div class="ms-section" id="right1">
+			<!--<h1>View sample program Listing 1.1</h1>-->	
+		</div>
+
+		<div class="ms-section" id="right2">
+		<table style='width:100%; padding-bottom:10%;'>
+			<tr><td style='padding:10%;'><h2>Deep look of class EggBasket</h2></td></tr>
+			<tr><td>
+			<pre id="coder2Text" style='font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000;'>
+	  int numberOfBaskets, eggsPerBasket, totalEggs; 
+	  <font color='#185427'>//This line creates 3 integer type of variables, 
+	  //They are numberOfBaskets, eggsPerBasket and totalEggs</font>
+			 
+	  numberOfBaskets = 10; 
+	  eggsPerBasket = 6; 
+	  <font color='#185427'>//numberOfBaskets assigns the variable equal to 10 
+	  //eggsPerBasket assigns the variable equal to 6 </font> 
+			 
+	  totalEggs = numberOfBaskets * eggsPerBasket; 
+	  //This line does two things: 
+	  //Multiply the value of numberOfBaskets and eggsPerBasket first. 
+	  //the product of two variables get assigned to totalEggs 
+			 
+	  System.out.println (eggsPerBasket + " eggs per basket and"); 
+	  <font color='#185427'>//It prints a longer string by combining 2 different types of variables 
+	  //an integer: eggsPerBasket(6) and a string: " eggs per basket and" 
+	  //the "+" operator does the job of concatenator  </font> 
+			</pre>
+			</td></tr>
+		</table>
+		</div>
+
+		<div class="ms-section" id="right3">
+			<table style='width:100%; padding-bottom:15%;'>
+			<tr><td style='padding:10%;'><h2>Output of EggBasket</h2></td></tr>
+			<tr><td><h3>sample output of EggBasket</h3></td></tr>
+			<tr><td><img id = "outputImager3"src="imgs/EggBasketOutput.png" ></td></tr>
+			</table>
+		</div>
+		
+		<div class="ms-section" id="right4">
+		<table style='width:100%; padding-bottom:10%;'>
+			<tr><td style='padding:7%;'><h2>Deep look of class ChangeMaker</h2></td></tr>
+			<tr><td>
+			<pre id="coder4Text" style='font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000;'>
+	  originalAmount = amount;
+	  <font color='#185427'>//Assign amount entered from user to originalAmount</font>
+			
+	  quarters = amount / 25;
+	  <font color='#185427'>//gets the maximum quarters from user entered amount
+	  //and assigned to parameter quarters</font>
+			
+	  amount = amount % 25;
+	  <font color='#185427'>//gets the remainder of amount after take away quarters
+	  //and reassigned to parameter amount</font>
+			
+	  dimes = amount / 10;
+	  <font color='#185427'>//gets the maximum dimes from leftover amount
+	  //and assigned to parameter dimes</font>
+			
+	  amount = amount % 10;
+	  <font color='#185427'>//gets the remainder of amount after take away dimes
+	  //and reassigned to parameter amount</font>
+			
+	  nickels = amount / 5;
+	  <font color='#185427'>//gets the maximum nickels from leftover amount
+	  //and assigned to parameter nickels</font>
+			
+	  amount = amount % 5;
+	  <font color='#185427'>//gets the remainder of amount after take away nickels
+	  //and reassigned to parameter amount</font>
+			
+	  pennies = amount;
+	  <font color='#185427'>//all the leftovers are assigned to pennies</font>
+			
+			</pre>
+			</td></tr>
+		</table>
+		</div>
+		<div class="ms-section" id="right5">
+		<table style='width:100%; padding-bottom:30%;'>
+			<tr><td style='padding:10%;'><h2>Output of ChangeMaker</h2></td></tr>
+			<tr><td><h3>sample output of ChangeMaker</h3></td></tr>
+			<tr><td style="padding-bottom:10%;"><img id = "outputImager5" src="imgs/ChangeMakerOutput.png" width="600" height="300"></td></tr>
+			</table>
+		
+		</div>
+		
+		<div class="ms-section" id="right6">
+		<table style='width:100%; padding-bottom:20%;'>
+		<tr><td style='padding:10%;'><h2>Deep Look of class ScannerDemo</h2></td></tr>
+		<tr><td>
+	  <pre id="coder6Text" style='font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000;'>
+	  double d1,d2;
+	  <font color='#185427'>//create 2 double type variables</font>
+			
+	  d1 = keyboard.nextDouble ();
+	  d2 = keyboard.nextDouble ();
+	  <font color='#185427'>//reads inputs from user in type double
+	  //and assign 1st input to d1 and 2nd to d2</font>
+			
+	  String s1, s2;
+	  <font color='#185427'>//create 2 String type variables</font>
+			
+	  s1 = keyboard.next ();
+	  s2 = keyboard.next ();
+	  <font color='#185427'>//reads inputs from user in type String
+	  //and assign 1st input to s1 and 2nd to s2
+	  /*note the .next() method only reads things before space character */</font>
+			
+	  s1 = keyboard.nextLine ();
+	  <font color='#185427'>//reads inputs from user and reassign s1
+	  /*note the .nextLine() method reads a line of input stream*/</font>
+			</pre>
+		</td></tr>
+		</table>
+		</div>
+		
+		<div class="ms-section" id="right7">
+		<table style='width:100%; padding-bottom:20%;'>
+		<tr><td style='padding:10%;'><h2>Output of ScannerDemo</h2></td></tr>
+		<tr><td><h3>sample output of ScannerDemo</h3></td></tr>
+		<tr><td style='padding-bottom:10%;'><img id="outputImager7" src="imgs/ScannerDemoOutput.png"></td></tr>
+		</table>
+		</div>
+		
+		<div class="ms-section" id="right8">
+		
+		</div>
+	</div>	
+</div>
+
+</body>
+</html>

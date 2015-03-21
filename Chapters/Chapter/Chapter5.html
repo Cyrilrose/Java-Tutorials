@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<title>Java Tutorial Chapter 5</title>
+	<!--<meta name="author" content="Alvaro Trigo Lopez" />-->
+	<!--<meta name="description" content="multiscroll plugin by Alvaro Trigo. Create divided multi-scrolling pages with two splited vertical layouts or panels." />
+	<meta name="keywords"  content="multiscroll,jquery,alvaro,trigo,plugin,divided,splitscreen,screen,panels,layouts,vertical,split,splited" />
+	<meta name="Resource-type" content="Document" />-->
+
+	
+	<link rel="stylesheet" type="text/css" href="../jquery.multiscroll.css" />		
+	<link rel="stylesheet" type="text/css" href="Chapter2.css" />	
+	<link rel="stylesheet" media="screen and (max-width: 600px)" href="Chapter2.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript" src="../vendors/jquery.easings.min.js"></script>
+	<script type="text/javascript" src="../jquery.multiscroll.js"></script>
+
+	<script type="text/javascript">
+        $(document).ready
+        (function(){
+            $('#myContainer').multiscroll({
+            	sectionsColor: ['#CCCC33', '#FFFF99', '#CC9933', '#83D1FC', '#CC9966', 
+				'#5ABFF5'],
+            	anchors: ['first', 'second', 'third', 'fourth','fifth','sixth'],
+            	menu: '#menu',
+            	navigation: true,
+            	navigationTooltips: ['One', 'Two', 'Three', 'Four','Fifth','Sixth'],
+            	loopBottom: true,
+            	loopTop: true,
+				easing: 'easeOutBack'
+            });
+         changeCodeSize();
+         
+    
+        });
+        
+    function changeCodeSize()
+    {
+        
+        
+		changeCode2Size();
+		changeCode3Size();
+		changeCode4Size();
+		changeCode5Size();
+		changeCode8Size();
+		changeCode9Size();
+		changeCode11Size();		
+		changeOutputImageSizeR5();
+    }
+    
+	function changeOutputImageSizeR5()
+    {
+        var w = window.innerWidth / 2.5;
+        var h = w / 2.6;
+        
+        var elem = document.getElementById("outputImager5");
+        elem.style.width = w + "px";
+        elem.style.height = h + "px";
+    }
+    
+    function changeCode2Size()
+    {
+        var w = window.innerWidth / 100;
+        var codeText = document.getElementById("codel2Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+	function changeCode3Size()
+    {
+        var w = window.innerWidth / 100;
+        var codeText = document.getElementById("codel3Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+	function changeCode4Size()
+    {
+        var w = window.innerWidth / 100;
+        var codeText = document.getElementById("codel4Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+	function changeCode5Size()
+    {
+        var w = window.innerWidth / 100;
+        var codeText = document.getElementById("codel5Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+	function changeCode8Size()
+    {
+        var w = window.innerWidth / 100;
+        var codeText = document.getElementById("coder2Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+	function changeCode9Size()
+    {
+        var w = window.innerWidth / 100;
+        var codeText = document.getElementById("coder4Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+	function changeCode11Size()
+    {
+        var w = window.innerWidth / 100;
+        var codeText = document.getElementById("coder3Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+    
+    </script>
+</head>
+<body onresize="changeCodeSize()">
+
+
+<ul id="menu">
+	<li data-menuanchor="first"><a href="#first">First slide</a></li>
+	<li data-menuanchor="second"><a href="#second">Second slide</a></li>
+	<li data-menuanchor="third"><a href="#third">Third slide</a></li>
+	<li data-menuanchor="fourth"><a href="#fourth">Fourth slide</a></li>
+	<li data-menuanchor="fifth"><a href="#fifth">Fifth slide</a></li>
+	<li data-menuanchor="sixth"><a href="#sixth">Sixth slide</a></li>
+</ul>
+
+<div id="myContainer">
+
+	<div class="ms-left">
+		<div class="ms-section" id="left1">
+			<div class="fullscreen">
+			<h1>Chapter 5</h1>
+			<br><br><br><br><br><br>
+			<h2>Writing Classes</h2>
+			<img src="imgs/javaLogo.png" height="257" width="285">
+			</div>
+		</div>
+
+		<div class="ms-section" id="left2">
+		<table style='width:100%; padding-bottom:5%;'>
+			<tr><td style='padding:5%;'><h2>Person Class Example</h2></td></tr>
+			<tr><td style='padding-left:10%;'><h3 style='text-align:left;'>class Person</h3></td></tr>
+			<tr><td style='padding-left:10%;'>
+<pre id="codel2Text"style='background:#FFFFFF; font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;'><strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>class</font></strong>&nbsp;Person
+{
+&nbsp;&nbsp;<strong><font color='#7f0055'>private</font></strong>&nbsp;String&nbsp;name;
+&nbsp;&nbsp;<strong><font color='#7f0055'>private</font></strong>&nbsp;<strong><font color='#7f0055'>int</font></strong>&nbsp;age;
+&nbsp;&nbsp;<strong><font color='#7f0055'>public</font></strong>&nbsp;Person()
+&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>this</font></strong>.name&nbsp;=&nbsp;<font color='#2a00ff'>"no&nbsp;name"</font>;
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>this</font></strong>.age&nbsp;=&nbsp;0;
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<strong><font color='#7f0055'>public</font></strong>&nbsp;Person(String&nbsp;initialName,&nbsp;<strong><font color='#7f0055'>int</font></strong>&nbsp;initialAge)
+&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>this</font></strong>.name&nbsp;=&nbsp;initialName;
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>this</font></strong>.age&nbsp;=&nbsp;initialAge;
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>void</font></strong>&nbsp;setAll(String&nbsp;newName,&nbsp;<strong><font color='#7f0055'>int</font></strong>&nbsp;newAge)
+&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>this</font></strong>.name&nbsp;=&nbsp;newName;
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>this</font></strong>.age&nbsp;=&nbsp;newAge;
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<strong><font color='#7f0055'>public</font></strong>&nbsp;String&nbsp;getName()
+&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>return</font></strong>&nbsp;<strong><font color='#7f0055'>this</font></strong>.name;
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>int</font></strong>&nbsp;getAge()
+&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>return</font></strong>&nbsp;<strong><font color='#7f0055'>this</font></strong>.age;
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>boolean</font></strong>&nbsp;hasSameName(Person&nbsp;otherPerson)
+&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>return</font></strong>&nbsp;<strong><font color='#7f0055'>this</font></strong>.name.equalsIgnoreCase(otherPerson.name);
+&nbsp;&nbsp;}
+}</pre></tr></td>
+		</table>
+		</div>
+
+		<div class="ms-section" id="left3">
+		<table style='width:100%; padding-bottom:5%;'>
+			<tr><td style='padding:5%;'><h2>Person Class Example(Cont.)</h2></td></tr>
+			<tr><td style='padding-left:10%;'><h3 style='text-align:left;'>class Person</h3></td></tr>
+			<tr><td style='padding-left:10%;'>
+<pre id="codel3Text"style='background:#FFFFFF; font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;'><strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>class</font></strong>&nbsp;Person
+{
+&nbsp;&nbsp;<strong><font color='#7f0055'>private</font></strong>&nbsp;String&nbsp;name;
+&nbsp;&nbsp;<strong><font color='#7f0055'>private</font></strong>&nbsp;<strong><font color='#7f0055'>int</font></strong>&nbsp;age;
+&nbsp;&nbsp;<strong><font color='#7f0055'>public</font></strong>&nbsp;Person()
+&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>this</font></strong>.name&nbsp;=&nbsp;<font color='#2a00ff'>"no&nbsp;name"</font>;
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>this</font></strong>.age&nbsp;=&nbsp;0;
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<strong><font color='#7f0055'>public</font></strong>&nbsp;Person(String&nbsp;initialName,&nbsp;<strong><font color='#7f0055'>int</font></strong>&nbsp;initialAge)
+&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>this</font></strong>.name&nbsp;=&nbsp;initialName;
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>this</font></strong>.age&nbsp;=&nbsp;initialAge;
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>void</font></strong>&nbsp;setAll(String&nbsp;newName,&nbsp;<strong><font color='#7f0055'>int</font></strong>&nbsp;newAge)
+&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>this</font></strong>.name&nbsp;=&nbsp;newName;
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>this</font></strong>.age&nbsp;=&nbsp;newAge;
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<strong><font color='#7f0055'>public</font></strong>&nbsp;String&nbsp;getName()
+&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>return</font></strong>&nbsp;<strong><font color='#7f0055'>this</font></strong>.name;
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>int</font></strong>&nbsp;getAge()
+&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>return</font></strong>&nbsp;<strong><font color='#7f0055'>this</font></strong>.age;
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>boolean</font></strong>&nbsp;hasSameName(Person&nbsp;otherPerson)
+&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>return</font></strong>&nbsp;<strong><font color='#7f0055'>this</font></strong>.name.equalsIgnoreCase(otherPerson.name);
+&nbsp;&nbsp;}
+}</pre></td></tr>
+		</table>
+		</div>
+		
+		<div class="ms-section" id="left4">
+			<table style='width:100%; padding-bottom:10%;'>
+			<tr><td style='padding:10%;'><h2>Person Class Example(Cont.)</h2></td></tr>
+			<tr><td style='padding-left:8%;'><h3 style='text-align:left;'>main class PersonDriver</h3></td></tr>
+			<tr><td style='padding-left:8%;'>
+			<pre id="codel4Text"style='background:#FFFFFF; font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;'><strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>class</font></strong>&nbsp;PersonDriver
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>static</font></strong>&nbsp;<strong><font color='#7f0055'>void</font></strong>&nbsp;main(String[]&nbsp;args)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Person&nbsp;p1&nbsp;=&nbsp;<strong><font color='#7f0055'>new</font></strong>&nbsp;Person();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Person&nbsp;p2&nbsp;=&nbsp;<strong><font color='#7f0055'>new</font></strong>&nbsp;Person();&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p1.setAll(<font color='#2a00ff'>"Allen"</font>,&nbsp;23);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p2.setAll(<font color='#2a00ff'>"Billy"</font>,&nbsp;20);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>if</font></strong>&nbsp;(p1.hasSameName(p2))&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<font color='#2a00ff'>"The&nbsp;name&nbsp;for&nbsp;two&nbsp;people&nbsp;are&nbsp;the&nbsp;same"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>else</font></strong>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<font color='#2a00ff'>"The&nbsp;name&nbsp;for&nbsp;two&nbsp;people&nbsp;are&nbsp;different"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}</pre>
+			</td></tr>
+			</table>			
+		</div>
+		<div class="ms-section" id="left5">
+			<table  style='width:100%; padding-bottom:10%;'>
+			<tr><td style='padding:10%;'><h2>Person Class Example(Cont.)</h2></td></tr>
+			<tr><td style='padding-left:8%;'><h3 style='text-align:left;'>main class PersonDriver</h3></td></tr>
+			<tr><td style='padding-left:8%;'>
+			<pre id="codel5Text"style='background:#FFFFFF; font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;'><strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>class</font></strong>&nbsp;PersonDriver
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>static</font></strong>&nbsp;<strong><font color='#7f0055'>void</font></strong>&nbsp;main(String[]&nbsp;args)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Person&nbsp;p1&nbsp;=&nbsp;<strong><font color='#7f0055'>new</font></strong>&nbsp;Person();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Person&nbsp;p2&nbsp;=&nbsp;<strong><font color='#7f0055'>new</font></strong>&nbsp;Person();&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p1.setAll(<font color='#2a00ff'>"Allen"</font>,&nbsp;23);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p2.setAll(<font color='#2a00ff'>"Billy"</font>,&nbsp;20);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>if</font></strong>&nbsp;(p1.hasSameName(p2))&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<font color='#2a00ff'>"The&nbsp;name&nbsp;for&nbsp;two&nbsp;people&nbsp;are&nbsp;the&nbsp;same"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>else</font></strong>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<font color='#2a00ff'>"The&nbsp;name&nbsp;for&nbsp;two&nbsp;people&nbsp;are&nbsp;different"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}</pre>
+			</td></tr>
+			</table>		
+		</div>
+		
+	<div class="ms-section" id="left6">
+	<div class="fullscreen">
+			<h1>End of Chapter 5</h1>
+			<br><div id="download"><a href="../../title page.html">Home</a></div>
+			</div>
+	</div>	
+	
+	</div>
+	
+	<div class="ms-right">
+		<div class="ms-section" id="right1">
+			<!--<h1>View sample program Listing 1.1</h1>-->	
+		</div>
+
+		<div class="ms-section" id="right2">
+		<table style='width:100%; padding-bottom:5%;'>
+			<tr><td style='padding:5%;'><h2>Deep look of class Person</h2></td></tr>
+			<tr><td style="padding-left:5%;">
+			<pre id="coder2Text" style='font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000;'>
+  private String name;
+  <font color='#185427'>//declare a String type variable name in private
+  /*note private can't get direct access from outside of this class*/</font>
+  
+  <font color='#185427'>/*default constractor for Person class*/</font>
+  public Person()
+  {
+    this.name = "no name";
+  <font color='#185427'>//this.name means the name parameter of this Person class</font>
+    this.age = 0;
+  }
+  
+  <font color='#185427'>/*constractor of Person class with 2 parameters for initialization*/</font>
+  public Person(String initialName, int initialAge)
+  {
+    this.name = initialName;
+	<font color='#185427'>//sets name to parameter initialName</font>
+    this.age = initialAge;
+	<font color='#185427'>sets age to parameter initialAge </font>
+  }
+  
+  <font color='#185427'>/*void type of setAll method with 2 parameters*/</font>
+  <font color='#185427'>/*note the void type does not return anything*/</font>
+  <font color='#185427'>/*note public means this method is accessible from outside of this class*/</font>
+  public void setAll(String newName, int newAge)
+  {
+  <font color='#185427'>/*sets name and age for Person class*/</font>
+    this.name = newName;
+    this.age = newAge;
+  }
+  
+</pre>
+		</td></tr>
+		</table>
+		</div>
+
+		<div class="ms-section" id="right3">
+			<table style='width:100%; padding-bottom:40%;'>
+			<tr><td style='padding:8%;'><h2>Deep look of class Person(Cont.)</h2></td></tr>
+			<tr><td style='padding-left:5%;'>
+			<pre id="coder3Text" style='font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000;'>
+  <font color='#185427'>/*String type of getName method*/</font>
+  <font color='#185427'>/*note exctpt void type, any other types need to return that type of value*/</font>
+  public String getName()
+  {
+    return this.name;
+  <font color='#185427'>//return the String type parameter name</font>
+  }
+  <font color='#185427'>/*a boolean type method hasSameName with a Person type object otherPerson*/</font>
+  public boolean hasSameName(Person otherPerson)
+  {
+    return this.name.equalsIgnoreCase(otherPerson.name);
+  <font color='#185427'>//this line means the current Person object calls the name parameter
+  //then the name parameter calls equalsIgnoreCase method from String class  
+  //to compare with another Person class, which also calls the name parameter</font>
+  }
+  </pre>
+			</td></tr>
+			</table>
+		</div>
+		
+		<div class="ms-section" id="right4">
+		<table style='width:100%; padding-bottom:10%;'>
+			<tr><td style='padding:7%;'><h2>Deep Look of class PersonDriver</h2></td></tr>
+			<tr><td>
+			<pre id="coder4Text" style='font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000;'>
+	  Person p1 = new Person();
+	  <font color='#185427'>//create a new Person type object p1</font>
+			
+	  p1.setAll("Allen", 23);
+	  <font color='#185427'>//p1 object calls the setAll method which 
+	  //sets name of p1 and age of p1 </font>
+
+	  if (p1.hasSameName(p2))
+	  <font color='#185427'>//p1 calls hasSameName method to compare with p2</font>
+	  {
+		System.out.println("The name for two people are the same");
+	  }
+	  else
+	  {
+		System.out.println("The name for two people are different");
+	  }		
+			</pre>
+			</td></tr>
+		</table>
+		</div>
+		<div class="ms-section" id="right5">
+		<table style='width:100%; padding-bottom:25%;'>
+			<tr><td style='padding:10%;'><h2>Output of PersonDriver</h2></td></tr>
+			<tr><td><h3>sample output of PersonDriver</h3></td></tr>
+			<tr><td><img id = "outputImager5" src="imgs/PersonDriverOutput.png"></td></tr>
+			</table>
+		
+		</div>
+		
+		<div class="ms-section" id="right6">
+		
+		</div>
+		
+	</div>	
+</div>
+
+</body>
+</html>

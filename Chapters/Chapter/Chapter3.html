@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<title>Java Tutorial Chapter 3</title>
+	<!--<meta name="author" content="Alvaro Trigo Lopez" />-->
+	<!--<meta name="description" content="multiscroll plugin by Alvaro Trigo. Create divided multi-scrolling pages with two splited vertical layouts or panels." />
+	<meta name="keywords"  content="multiscroll,jquery,alvaro,trigo,plugin,divided,splitscreen,screen,panels,layouts,vertical,split,splited" />
+	<meta name="Resource-type" content="Document" />-->
+
+	
+	<link rel="stylesheet" type="text/css" href="../jquery.multiscroll.css" />		
+	<link rel="stylesheet" type="text/css" href="Chapter3.css" />	
+	<link rel="stylesheet" media="screen and (max-width: 600px)" href="Chapter3.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript" src="../vendors/jquery.easings.min.js"></script>
+	<script type="text/javascript" src="../jquery.multiscroll.js"></script>
+
+	<script type="text/javascript">
+        $(document).ready
+        (function(){
+            $('#myContainer').multiscroll({
+            	sectionsColor: ['#FF972F', '#FFFF99', '#CC9933', '#83D1FC', '#CC9966', 
+				'#40C6D0'],
+            	anchors: ['first', 'second', 'third', 'fourth','fifth','sixth'],
+            	menu: '#menu',
+            	navigation: true,
+            	navigationTooltips: ['One', 'Two', 'Three', 'Four','Fifth','Sixth'],
+            	loopBottom: true,
+            	loopTop: true,
+				easing: 'easeOutBack'
+            });
+         changeCodeSize();
+         
+    
+        });
+        
+    function changeCodeSize()
+    {
+        
+        
+		changeCode2Size();
+		changeCode3Size();
+		changeCode4Size();
+		changeCode5Size();
+		changeCode8Size();
+		changeCode9Size();
+		changeOutputImageSizeR3();
+		changeOutputImageSizeR5();
+		changeOutputImageSizeR7();
+
+    }
+    
+    function changeOutputImageSize()
+    {
+        var w = window.innerWidth / 2.5;
+        var h = w / 2.6;
+        
+        var elem = document.getElementById("outputImage");
+        elem.style.width = w + "px";
+        elem.style.height = h + "px";
+    }
+	function changeOutputImageSizeR3()
+    {
+        var w = window.innerWidth / 2.5;
+        var h = w / 2.6;
+        
+        var elem = document.getElementById("outputImager3");
+        elem.style.width = w + "px";
+        elem.style.height = h + "px";
+    }
+	function changeOutputImageSizeR5()
+    {
+        var w = window.innerWidth / 2.5;
+        var h = w / 2.6;
+        
+        var elem = document.getElementById("outputImager5");
+        elem.style.width = w + "px";
+        elem.style.height = h + "px";
+    }
+	function changeOutputImageSizeR7()
+    {
+        var w = window.innerWidth / 2.5;
+        var h = w / 2.6;
+        
+        var elem = document.getElementById("outputImager7");
+        elem.style.width = w + "px";
+        elem.style.height = h + "px";
+    }
+    
+    function changeCode2Size()
+    {
+        var w = window.innerWidth / 100;
+        var codeText = document.getElementById("codel2Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+	function changeCode3Size()
+    {
+        var w = window.innerWidth / 100;
+        var codeText = document.getElementById("codel3Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+	function changeCode4Size()
+    {
+        var w = window.innerWidth / 100;
+        var codeText = document.getElementById("codel4Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+	function changeCode5Size()
+    {
+        var w = window.innerWidth / 100;
+        var codeText = document.getElementById("codel5Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+	function changeCode8Size()
+    {
+        var w = window.innerWidth / 100;
+        var codeText = document.getElementById("coder2Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+	function changeCode9Size()
+    {
+        var w = window.innerWidth / 100;
+        var codeText = document.getElementById("coder4Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+	
+    /*
+    function changeCode2Size()
+    {
+        var w = window.innerWidth / 200;
+        var codeText = document.getElementById("code2Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+    */
+    </script>
+</head>
+<body onresize="changeCodeSize()">
+
+
+<ul id="menu">
+	<li data-menuanchor="first"><a href="#first">First slide</a></li>
+	<li data-menuanchor="second"><a href="#second">Second slide</a></li>
+	<li data-menuanchor="third"><a href="#third">Third slide</a></li>
+	<li data-menuanchor="fourth"><a href="#fourth">Fourth slide</a></li>
+	<li data-menuanchor="fifth"><a href="#fifth">Fifth slide</a></li>
+	<li data-menuanchor="sixth"><a href="#sixth">Sixth slide</a></li>
+</ul>
+
+<div id="myContainer">
+
+	<div class="ms-left">
+		<div class="ms-section" id="left1">
+			<div class="fullscreen">
+			<h1>Chapter 3</h1>
+			<br><br><br><br><br><br>
+			<h2>Classes and Objects</h2>
+			<img src="imgs/javaLogo.png" height="257" width="285">
+			</div>
+		</div>
+
+		<div class="ms-section" id="left2">
+		<table style='width:100%; padding-bottom:10%;'>
+			<tr><td style='padding:10%;'><h2>String Class Example</h2></td></tr>
+			<tr><td style='padding-left:10%;'><h3 style='text-align:left;'>class StringEqualityDemo</h3></td></tr>
+			<tr><td style='padding-left:10%;'>
+<pre id ="codel2Text" style='background:#FFFFFF; font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;'><strong><font color='#7f0055'>import</font></strong>&nbsp;java.util.Scanner;
+<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>class</font></strong>&nbsp;StringEqualityDemo
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>static</font></strong>&nbsp;<strong><font color='#7f0055'>void</font></strong>&nbsp;main&nbsp;(String&nbsp;[]&nbsp;args)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;s1,&nbsp;s2;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"Enter&nbsp;two&nbsp;lines&nbsp;of&nbsp;text:"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scanner&nbsp;keyboard&nbsp;=&nbsp;<strong><font color='#7f0055'>new</font></strong>&nbsp;Scanner&nbsp;(System.in);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s1&nbsp;=&nbsp;keyboard.nextLine&nbsp;();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s2&nbsp;=&nbsp;keyboard.nextLine&nbsp;();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>if</font></strong>&nbsp;(s1.equals&nbsp;(s2))
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"The&nbsp;two&nbsp;lines&nbsp;are&nbsp;equal."</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>else</font></strong>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"The&nbsp;two&nbsp;lines&nbsp;are&nbsp;not&nbsp;equal."</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>if</font></strong>&nbsp;(s2.equals&nbsp;(s1))
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"The&nbsp;two&nbsp;lines&nbsp;are&nbsp;equal."</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>else</font></strong>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"The&nbsp;two&nbsp;lines&nbsp;are&nbsp;not&nbsp;equal."</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>if</font></strong>&nbsp;(s1.equalsIgnoreCase&nbsp;(s2))
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color='#2a00ff'>"But&nbsp;the&nbsp;lines&nbsp;are&nbsp;equal,&nbsp;ignoring&nbsp;case."</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>else</font></strong>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color='#2a00ff'>"Lines&nbsp;are&nbsp;not&nbsp;equal,&nbsp;even&nbsp;ignoring&nbsp;case."</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}</pre>
+		</tr></td>
+		</table>
+		</div>
+
+		<div class="ms-section" id="left3">
+		<table style='width:100%; padding-bottom:10%;'>
+			<tr><td style='padding:10%;'><h2>String Class Example(Cont.)</h2></td></tr>
+			<tr><td style='padding-left:10%;'><h3 style='text-align:left;'>class StringEqualityDemo</h3></td></tr>
+			<tr><td style='padding-left:10%;'>
+<pre id ="codel3Text" style='background:#FFFFFF; font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;'><strong><font color='#7f0055'>import</font></strong>&nbsp;java.util.Scanner;
+<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>class</font></strong>&nbsp;StringEqualityDemo
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>static</font></strong>&nbsp;<strong><font color='#7f0055'>void</font></strong>&nbsp;main&nbsp;(String&nbsp;[]&nbsp;args)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;s1,&nbsp;s2;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"Enter&nbsp;two&nbsp;lines&nbsp;of&nbsp;text:"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scanner&nbsp;keyboard&nbsp;=&nbsp;<strong><font color='#7f0055'>new</font></strong>&nbsp;Scanner&nbsp;(System.in);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s1&nbsp;=&nbsp;keyboard.nextLine&nbsp;();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s2&nbsp;=&nbsp;keyboard.nextLine&nbsp;();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>if</font></strong>&nbsp;(s1.equals&nbsp;(s2))
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"The&nbsp;two&nbsp;lines&nbsp;are&nbsp;equal."</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>else</font></strong>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"The&nbsp;two&nbsp;lines&nbsp;are&nbsp;not&nbsp;equal."</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>if</font></strong>&nbsp;(s2.equals&nbsp;(s1))
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"The&nbsp;two&nbsp;lines&nbsp;are&nbsp;equal."</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>else</font></strong>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"The&nbsp;two&nbsp;lines&nbsp;are&nbsp;not&nbsp;equal."</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>if</font></strong>&nbsp;(s1.equalsIgnoreCase&nbsp;(s2))
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color='#2a00ff'>"But&nbsp;the&nbsp;lines&nbsp;are&nbsp;equal,&nbsp;ignoring&nbsp;case."</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>else</font></strong>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color='#2a00ff'>"Lines&nbsp;are&nbsp;not&nbsp;equal,&nbsp;even&nbsp;ignoring&nbsp;case."</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}</pre>
+		</td></tr>
+		</table>
+		</div>
+		
+		<div class="ms-section" id="left4">
+			<table style='width:100%; padding-bottom:10%;'>
+			<tr><td style='padding:10%;'><h2>enum Example</h2></td></tr>
+			<tr><td style='padding-left:8%;'><h3 style='text-align:left;'>class IceCream</h3></td></tr>
+			<tr><td style='padding-left:8%;'>
+			<pre id ="codel4Text" style='background:#FFFFFF; font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;'><strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>class</font></strong>&nbsp;IceCream
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>enum</font></strong>&nbsp;Flavor{vanilla,&nbsp;chocolate,&nbsp;strawberry,&nbsp;fudgeRipple,&nbsp;coffee,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rockyRoad,&nbsp;minChocolateChip,&nbsp;cookieDough}
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>static</font></strong>&nbsp;<strong><font color='#7f0055'>void</font></strong>&nbsp;main(String[]&nbsp;args)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Flavor&nbsp;cone1,&nbsp;cone2,&nbsp;cone3;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cone1&nbsp;=&nbsp;Flavor.rockyRoad;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cone2&nbsp;=&nbsp;Flavor.chocolate;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<font color='#2a00ff'>"cone1&nbsp;value:&nbsp;"</font>&nbsp;+&nbsp;cone1);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<font color='#2a00ff'>"cone1&nbsp;ordinal:&nbsp;"</font>&nbsp;+&nbsp;cone1.ordinal());
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<font color='#2a00ff'>"cone1&nbsp;name:&nbsp;"</font>&nbsp;+&nbsp;cone1.name());
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<font color='#2a00ff'>"cone2&nbsp;value:&nbsp;"</font>&nbsp;+&nbsp;cone2);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<font color='#2a00ff'>"cone2&nbsp;ordinal:&nbsp;"</font>&nbsp;+&nbsp;cone2.ordinal());
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<font color='#2a00ff'>"cone2&nbsp;name:&nbsp;"</font>&nbsp;+&nbsp;cone2.name());
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cone3&nbsp;=&nbsp;cone1;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<font color='#2a00ff'>"cone1&nbsp;value:&nbsp;"</font>&nbsp;+&nbsp;cone3);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<font color='#2a00ff'>"cone1&nbsp;ordinal:&nbsp;"</font>&nbsp;+&nbsp;cone3.ordinal());
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<font color='#2a00ff'>"cone1&nbsp;name:&nbsp;"</font>&nbsp;+&nbsp;cone3.name());
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}</pre>
+			</td></tr>
+			</table>			
+		</div>
+		<div class="ms-section" id="left5">
+			<table  style='width:100%; padding-bottom:10%;'>
+			<tr><td style='padding:10%;'><h2>enum Example(Cont.)</h2></td></tr>
+			<tr><td style='padding-left:8%;'><h3 style='text-align:left;'>class IceCream</h3></td></tr>
+			<tr><td style='padding-left:8%;'>
+			<pre id ="codel5Text" style='background:#FFFFFF; font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;'><strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>class</font></strong>&nbsp;IceCream
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>enum</font></strong>&nbsp;Flavor{vanilla,&nbsp;chocolate,&nbsp;strawberry,&nbsp;fudgeRipple,&nbsp;coffee,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rockyRoad,&nbsp;minChocolateChip,&nbsp;cookieDough}
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>static</font></strong>&nbsp;<strong><font color='#7f0055'>void</font></strong>&nbsp;main(String[]&nbsp;args)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Flavor&nbsp;cone1,&nbsp;cone2,&nbsp;cone3;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cone1&nbsp;=&nbsp;Flavor.rockyRoad;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cone2&nbsp;=&nbsp;Flavor.chocolate;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<font color='#2a00ff'>"cone1&nbsp;value:&nbsp;"</font>&nbsp;+&nbsp;cone1);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<font color='#2a00ff'>"cone1&nbsp;ordinal:&nbsp;"</font>&nbsp;+&nbsp;cone1.ordinal());
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<font color='#2a00ff'>"cone1&nbsp;name:&nbsp;"</font>&nbsp;+&nbsp;cone1.name());
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<font color='#2a00ff'>"cone2&nbsp;value:&nbsp;"</font>&nbsp;+&nbsp;cone2);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<font color='#2a00ff'>"cone2&nbsp;ordinal:&nbsp;"</font>&nbsp;+&nbsp;cone2.ordinal());
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<font color='#2a00ff'>"cone2&nbsp;name:&nbsp;"</font>&nbsp;+&nbsp;cone2.name());
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cone3&nbsp;=&nbsp;cone1;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<font color='#2a00ff'>"cone1&nbsp;value:&nbsp;"</font>&nbsp;+&nbsp;cone3);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<font color='#2a00ff'>"cone1&nbsp;ordinal:&nbsp;"</font>&nbsp;+&nbsp;cone3.ordinal());
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<font color='#2a00ff'>"cone1&nbsp;name:&nbsp;"</font>&nbsp;+&nbsp;cone3.name());
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}</pre>
+			</td></tr>
+			</table>		
+		</div>
+		
+		<div class="ms-section" id="left6">
+		<div class="fullscreen">
+			<h1>Chapter Practice Games</h1>
+			<a href="../../paniniGame/index.html"><img src="imgs/ss_panini_1.png" height="398" width="600"></a>
+			<br><div id="download"><a href="../../title page.html">Home</a></div>
+			</div>
+		</div>
+			
+	
+	</div>
+	
+	<div class="ms-right">
+		<div class="ms-section" id="right1">
+			<!--<h1>View sample program Listing 1.1</h1>-->	
+		</div>
+
+		<div class="ms-section" id="right2">
+		<table id="" style='width:100%; padding-bottom:20%;'>
+			<tr><td style='padding:10%;'><h2>Deep look of class StringEqualityDemo</h2></td></tr>
+			<tr><td>
+			<pre id="coder2Text" style='font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000;'>
+	  if (s1.equals (s2))
+	    System.out.println ("The two lines are equal.");
+	  else
+	    System.out.println ("The two lines are not equal.");
+	  
+	<font color='#185427'>//s1 calles the equals method from string class to
+	//check is the entered string in s1 is equal to s2 or not 
+	//if s1 is equal to s2 prints "The two lines are equal."
+	//if s1 is not equal to s2 prints "The two lines are not equal."
+	/*note the equals method returns true or false after compare two objects*/</font>
+			
+	  if (s1.equalsIgnoreCase (s2))
+	    System.out.println ("But the lines are equal, ignoring case.");
+	  else
+	    System.out.println ("Lines are not equal, even ignoring case.");
+	  
+	<font color='#185427'>//s1 calles the equalsIgnoreCase method from string class to
+	//check is the entered string in s1 is equal to s2 or not
+	//if s1 is equal to s2 prints "But the lines are equal, ignoring case."
+	//if s1 is not equal to s2 prints "Lines are not equal, even ignoring case."
+	/*note the equalsIgnoreCase has same return type as equals method*/</font>
+			
+			</pre>
+			</td></tr>
+		</table>
+		</div>
+
+		<div class="ms-section" id="right3">
+			<table style='width:100%; padding-bottom:30%;'>
+			<tr><td style='padding:10%;'><h2>Output of StringEqualityDemo</h2></td></tr>
+			<tr><td><h3>sample output of StringEqualityDemo</h3></td></tr>
+			<tr><td><img id = "outputImager3"src="imgs/StringEqualityDemoOutput.png" width="600" height="300" ></td></tr>
+			</table>
+		</div>
+		
+		<div class="ms-section" id="right4">
+		<table style='width:100%; padding-bottom:10%;'>
+			<tr><td style='padding:10%;'><h2>Deep look  of class IceCream</h2></td></tr>
+			<tr><td>
+			<pre id="coder4Text" style='font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000;'>
+	  enum Flavor{vanilla, chocolate, strawberry, fudgeRipple, coffee,
+                rockyRoad, minChocolateChip, cookieDough}
+	  <font color='#185427'>//create an enum type set of predefined constants Flavor
+	  //inside the {} are the elements of sets
+	  //the first elements of enum starts from index 0
+	  //example: strawberry is in index of 2 in this set </font>
+			
+	  Flavor cone1, cone2, cone3;
+	  <font color='#185427'>//initialize cone1, cone2, cone3 as a set of Flavor </font>
+        
+	  cone1 = Flavor.rockyRoad;
+	  cone2 = Flavor.chocolate;
+	  <font color='#185427'>//assign elements rockyRoad from the set Flavor to cone1</font>
+	  <font color='#185427'>//assign elements chocolate from the set Flavor to cone2</font>
+			
+	  System.out.println("cone1 value: " + cone1);
+	  <font color='#185427'>//prints the element in cone1</font>
+			
+	  System.out.println("cone1 ordinal: " + cone1.ordinal());
+	  <font color='#185427'>//prints the element index in cone1</font>
+			
+	  System.out.println("cone1 name: " + cone1.name());
+	  <font color='#185427'>//prints the name of element in cone1</font>
+			</pre>
+			</td></tr>
+		</table>
+		</div>
+		<div class="ms-section" id="right5">
+		<table style='width:100%; padding-bottom:40%;'>
+			<tr><td style='padding:10%;'><h2>Output of IceCream</h2></td></tr>
+			<tr><td><h3>sample output of IceCream</h3></td></tr>
+			<tr><td><img id = "outputImager5" src="imgs/IceCreamOutput.png"></td></tr>
+			</table>
+		
+		</div>
+		
+		<div class="ms-section" id="right6">
+		
+		</div>
+		
+	</div>	
+</div>
+
+</body>
+</html>

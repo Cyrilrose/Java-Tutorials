@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<title>Java Tutorial Chapter 4</title>
+	<!--<meta name="author" content="Alvaro Trigo Lopez" />-->
+	<!--<meta name="description" content="multiscroll plugin by Alvaro Trigo. Create divided multi-scrolling pages with two splited vertical layouts or panels." />
+	<meta name="keywords"  content="multiscroll,jquery,alvaro,trigo,plugin,divided,splitscreen,screen,panels,layouts,vertical,split,splited" />
+	<meta name="Resource-type" content="Document" />-->
+
+	
+	<link rel="stylesheet" type="text/css" href="../jquery.multiscroll.css" />		
+	<link rel="stylesheet" type="text/css" href="Chapter4.css" />	
+	<link rel="stylesheet" media="screen and (max-width: 600px)" href="Chapter4.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript" src="../vendors/jquery.easings.min.js"></script>
+	<script type="text/javascript" src="../jquery.multiscroll.js"></script>
+
+	<script type="text/javascript">
+        $(document).ready
+        (function(){
+            $('#myContainer').multiscroll({
+            	sectionsColor: ['#5BADFF', '#FFFF99', '#CC9933', '#83D1FC', '#CC9966', 
+				'#CCCC66','#FFF3A2','#FFCC33','#FFBBF3','#67B6E4'],
+            	anchors: ['first', 'second', 'third', 'fourth','fifth','sixth','seventh','eighth','ninth','tenth'],
+            	menu: '#menu',
+            	navigation: true,
+            	navigationTooltips: ['One', 'Two', 'Three', 'Four','Fifth','Sixth','Seventh','Eighth','Ninth','Tenth'],
+            	loopBottom: true,
+            	loopTop: true,
+				easing: 'easeOutBack'
+            });
+         changeCodeSize();
+         
+    
+        });
+        
+    function changeCodeSize()
+    {
+        
+        
+		changeCode2Size();
+		changeCode3Size();
+		changeCode4Size();
+		changeCode5Size();
+		changeCode6Size();
+		changeCode7Size();
+		changeCode8Size();
+		changeCode9Size();
+		changeCode10Size();
+		changeCode11Size();
+		changeCode12Size();
+		changeCode13Size();
+		//changeOutputImageSize();
+		changeOutputImageSizeR3();
+		changeOutputImageSizeR5();
+		changeOutputImageSizeR52();
+		changeOutputImageSizeR7();
+		changeOutputImageSizeR9();
+        //changeCode2Size();
+        //changeCode3Size();
+    }
+    
+    function changeOutputImageSize()
+    {
+        var w = window.innerWidth / 2.5;
+        var h = w / 2.6;
+        
+        var elem = document.getElementById("outputImage");
+        elem.style.width = w + "px";
+        elem.style.height = h + "px";
+    }
+	function changeOutputImageSizeR3()
+    {
+        var w = window.innerWidth / 2.5;
+        var h = w / 2.6;
+        
+        var elem = document.getElementById("outputImager3");
+        elem.style.width = w + "px";
+        elem.style.height = h + "px";
+    }
+	function changeOutputImageSizeR5()
+    {
+        var w = window.innerWidth / 2.5;
+        var h = w / 3.6;
+        
+        var elem = document.getElementById("outputImager5");
+        elem.style.width = w + "px";
+        elem.style.height = h + "px";
+    }
+	function changeOutputImageSizeR52()
+    {
+        var w = window.innerWidth / 2.5;
+        var h = w / 3.6;
+        
+        var elem = document.getElementById("outputImager52");
+        elem.style.width = w + "px";
+        elem.style.height = h + "px";
+    }
+	function changeOutputImageSizeR7()
+    {
+        var w = window.innerWidth / 2.5;
+        var h = w / 2.6;
+        
+        var elem = document.getElementById("outputImager7");
+        elem.style.width = w + "px";
+        elem.style.height = h + "px";
+    }
+    function changeOutputImageSizeR9()
+    {
+        var w = window.innerWidth / 2.5;
+        var h = w / 1.6;
+        
+        var elem = document.getElementById("outputImager9");
+        elem.style.width = w + "px";
+        elem.style.height = h + "px";
+    }
+    function changeCode2Size()
+    {
+        var w = window.innerWidth / 100;
+        var codeText = document.getElementById("codel2Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+	function changeCode3Size()
+    {
+        var w = window.innerWidth / 100;
+        var codeText = document.getElementById("codel3Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+	function changeCode4Size()
+    {
+        var w = window.innerWidth / 100;
+        var codeText = document.getElementById("codel4Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+	function changeCode5Size()
+    {
+        var w = window.innerWidth / 100;
+        var codeText = document.getElementById("codel5Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+	function changeCode6Size()
+    {
+        var w = window.innerWidth / 100;
+        var codeText = document.getElementById("codel6Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+	function changeCode7Size()
+    {
+        var w = window.innerWidth / 100;
+        var codeText = document.getElementById("codel7Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+	function changeCode8Size()
+    {
+        var w = window.innerWidth / 100;
+        var codeText = document.getElementById("coder2Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+	function changeCode9Size()
+    {
+        var w = window.innerWidth / 100;
+        var codeText = document.getElementById("coder4Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+	function changeCode10Size()
+    {
+        var w = window.innerWidth / 100;
+        var codeText = document.getElementById("coder6Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+	function changeCode11Size()
+    {
+        var w = window.innerWidth / 100;
+        var codeText = document.getElementById("codel8Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+	function changeCode12Size()
+    {
+        var w = window.innerWidth / 100;
+        var codeText = document.getElementById("codel9Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+	function changeCode13Size()
+    {
+        var w = window.innerWidth / 100;
+        var codeText = document.getElementById("coder8Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+    /*
+    function changeCode2Size()
+    {
+        var w = window.innerWidth / 200;
+        var codeText = document.getElementById("code2Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+    */
+    </script>
+</head>
+<body onresize="changeCodeSize()">
+
+
+<ul id="menu">
+	<li data-menuanchor="first"><a href="#first">First slide</a></li>
+	<li data-menuanchor="second"><a href="#second">Second slide</a></li>
+	<li data-menuanchor="third"><a href="#third">Third slide</a></li>
+	<li data-menuanchor="fourth"><a href="#fourth">Fourth slide</a></li>
+	<li data-menuanchor="fifth"><a href="#fifth">Fifth slide</a></li>
+	<li data-menuanchor="sixth"><a href="#sixth">Sixth slide</a></li>
+	<li data-menuanchor="seventh"><a href="#seventh">Seventh slide</a></li>
+	<li data-menuanchor="eighth"><a href="#eighth">Eighth slide</a></li>
+	<li data-menuanchor="ninth"><a href="#ninth">Ninth slide</a></li>
+	<li data-menuanchor="tenth"><a href="#tenth">Tenth slide</a></li>
+</ul>
+
+<div id="myContainer">
+
+	<div class="ms-left">
+		<div class="ms-section" id="left1">
+			<div class="fullscreen">
+			<h1>Chapter 4</h1>
+			<br><br><br><br><br><br>
+			<h2>Conditionals and Loops</h2>
+			<img src="imgs/javaLogo.png" height="257" width="285">
+			</div>
+		</div>
+
+		<div class="ms-section" id="left2">
+		<table style='width:100%; padding-bottom:10%;'>
+			<tr><td style='padding:10%;'><h2>if else Example</h2></td></tr>
+			<tr><td style='padding-left:10%;'><h3 style='text-align:left;'>class Grader</h3></td></tr>
+			<tr><td style='padding-left:10%;'>
+			<pre id="codel2Text" style='background:#FFFFFF; font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;'><strong><font color='#7f0055'>import</font></strong>&nbsp;java.util.Scanner;
+<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>class</font></strong>&nbsp;Grader
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>static</font></strong>&nbsp;<strong><font color='#7f0055'>void</font></strong>&nbsp;main&nbsp;(String&nbsp;[]&nbsp;args)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>int</font></strong>&nbsp;score;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>char</font></strong>&nbsp;grade;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"Enter&nbsp;your&nbsp;score:&nbsp;"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scanner&nbsp;keyboard&nbsp;=&nbsp;<strong><font color='#7f0055'>new</font></strong>&nbsp;Scanner&nbsp;(System.in);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;score&nbsp;=&nbsp;keyboard.nextInt&nbsp;();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>if</font></strong>&nbsp;(score&nbsp;>=&nbsp;90)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grade&nbsp;=&nbsp;<font color='#2a00ff'>'A'</font>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>else</font></strong>&nbsp;<strong><font color='#7f0055'>if</font></strong>&nbsp;(score&nbsp;>=&nbsp;80)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grade&nbsp;=&nbsp;<font color='#2a00ff'>'B'</font>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>else</font></strong>&nbsp;<strong><font color='#7f0055'>if</font></strong>&nbsp;(score&nbsp;>=&nbsp;70)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grade&nbsp;=&nbsp;<font color='#2a00ff'>'C'</font>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>else</font></strong>&nbsp;<strong><font color='#7f0055'>if</font></strong>&nbsp;(score&nbsp;>=&nbsp;60)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grade&nbsp;=&nbsp;<font color='#2a00ff'>'D'</font>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>else</font></strong>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grade&nbsp;=&nbsp;<font color='#2a00ff'>'F'</font>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"Score&nbsp;=&nbsp;"</font>&nbsp;+&nbsp;score);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"Grade&nbsp;=&nbsp;"</font>&nbsp;+&nbsp;grade);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}
+</pre>
+</tr></td>
+		</table>
+		</div>
+
+		<div class="ms-section" id="left3">
+		<table style='width:100%; padding-bottom:10%;'>
+			<tr><td style='padding:10%;'><h2>if else Example(Cont.)</h2></td></tr>
+			<tr><td style='padding-left:10%;'><h3 style='text-align:left;'>class Grader</h3></td></tr>
+			<tr><td style='padding-left:10%;'>
+<pre id="codel3Text" style='background:#FFFFFF; font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;'><strong><font color='#7f0055'>import</font></strong>&nbsp;java.util.Scanner;
+<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>class</font></strong>&nbsp;Grader
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>static</font></strong>&nbsp;<strong><font color='#7f0055'>void</font></strong>&nbsp;main&nbsp;(String&nbsp;[]&nbsp;args)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>int</font></strong>&nbsp;score;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>char</font></strong>&nbsp;grade;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"Enter&nbsp;your&nbsp;score:&nbsp;"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scanner&nbsp;keyboard&nbsp;=&nbsp;<strong><font color='#7f0055'>new</font></strong>&nbsp;Scanner&nbsp;(System.in);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;score&nbsp;=&nbsp;keyboard.nextInt&nbsp;();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>if</font></strong>&nbsp;(score&nbsp;>=&nbsp;90)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grade&nbsp;=&nbsp;<font color='#2a00ff'>'A'</font>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>else</font></strong>&nbsp;<strong><font color='#7f0055'>if</font></strong>&nbsp;(score&nbsp;>=&nbsp;80)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grade&nbsp;=&nbsp;<font color='#2a00ff'>'B'</font>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>else</font></strong>&nbsp;<strong><font color='#7f0055'>if</font></strong>&nbsp;(score&nbsp;>=&nbsp;70)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grade&nbsp;=&nbsp;<font color='#2a00ff'>'C'</font>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>else</font></strong>&nbsp;<strong><font color='#7f0055'>if</font></strong>&nbsp;(score&nbsp;>=&nbsp;60)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grade&nbsp;=&nbsp;<font color='#2a00ff'>'D'</font>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>else</font></strong>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grade&nbsp;=&nbsp;<font color='#2a00ff'>'F'</font>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"Score&nbsp;=&nbsp;"</font>&nbsp;+&nbsp;score);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"Grade&nbsp;=&nbsp;"</font>&nbsp;+&nbsp;grade);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}
+</pre></td></tr>
+		</table>
+		</div>
+		
+		<div class="ms-section" id="left4">
+			<table style='width:100%; padding-bottom:10%;'>
+			<tr><td style='padding:8%;'><h2>Switch Example</h2></td></tr>
+			<tr><td style='padding-left:8%;'><h3 style='text-align:left;'>class MultipleBirths</h3></td></tr>
+			<tr><td style='padding-left:8%;'>
+			<pre id="codel4Text" style='background:#FFFFFF; font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;'><strong><font color='#7f0055'>import</font></strong>&nbsp;java.util.Scanner;
+<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>class</font></strong>&nbsp;MultipleBirths
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>static</font></strong>&nbsp;<strong><font color='#7f0055'>void</font></strong>&nbsp;main&nbsp;(String&nbsp;[]&nbsp;args)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>int</font></strong>&nbsp;numberOfBabies;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print&nbsp;(<font color='#2a00ff'>"Enter&nbsp;number&nbsp;of&nbsp;babies:&nbsp;"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scanner&nbsp;keyboard&nbsp;=&nbsp;<strong><font color='#7f0055'>new</font></strong>&nbsp;Scanner&nbsp;(System.in);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numberOfBabies&nbsp;=&nbsp;keyboard.nextInt&nbsp;();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>switch</font></strong>&nbsp;(numberOfBabies)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>case</font></strong>&nbsp;1:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"Congratulations."</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>break</font></strong>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>case</font></strong>&nbsp;2:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"Wow.&nbsp;Twins."</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>break</font></strong>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>case</font></strong>&nbsp;3:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"Wow.&nbsp;Triplets."</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>break</font></strong>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>case</font></strong>&nbsp;4:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>case</font></strong>&nbsp;5:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print&nbsp;(<font color='#2a00ff'>"Unbelieveable;&nbsp;"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(numberOfBabies&nbsp;+&nbsp;<font color='#2a00ff'>"&nbsp;babies."</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>break</font></strong>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>default</font></strong>:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"I&nbsp;don't&nbsp;believe&nbsp;you."</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>break</font></strong>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}
+</pre>
+			</td></tr>
+			</table>			
+		</div>
+		<div class="ms-section" id="left5">
+			<table  style='width:100%; padding-bottom:10%;'>
+			<tr><td style='padding:8%;'><h2>Switch Example (Cont.)</h2></td></tr>
+			<tr><td style='padding-left:8%;'><h3 style='text-align:left;'>class MultipleBirths</h3></td></tr>
+			<tr><td style='padding-left:8%;'>
+			<pre id="codel5Text" style='background:#FFFFFF; font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;'><strong><font color='#7f0055'>import</font></strong>&nbsp;java.util.Scanner;
+<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>class</font></strong>&nbsp;MultipleBirths
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>static</font></strong>&nbsp;<strong><font color='#7f0055'>void</font></strong>&nbsp;main&nbsp;(String&nbsp;[]&nbsp;args)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>int</font></strong>&nbsp;numberOfBabies;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print&nbsp;(<font color='#2a00ff'>"Enter&nbsp;number&nbsp;of&nbsp;babies:&nbsp;"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scanner&nbsp;keyboard&nbsp;=&nbsp;<strong><font color='#7f0055'>new</font></strong>&nbsp;Scanner&nbsp;(System.in);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numberOfBabies&nbsp;=&nbsp;keyboard.nextInt&nbsp;();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>switch</font></strong>&nbsp;(numberOfBabies)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>case</font></strong>&nbsp;1:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"Congratulations."</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>break</font></strong>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>case</font></strong>&nbsp;2:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"Wow.&nbsp;Twins."</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>break</font></strong>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>case</font></strong>&nbsp;3:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"Wow.&nbsp;Triplets."</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>break</font></strong>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>case</font></strong>&nbsp;4:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>case</font></strong>&nbsp;5:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print&nbsp;(<font color='#2a00ff'>"Unbelieveable;&nbsp;"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(numberOfBabies&nbsp;+&nbsp;<font color='#2a00ff'>"&nbsp;babies."</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>break</font></strong>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>default</font></strong>:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"I&nbsp;don't&nbsp;believe&nbsp;you."</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>break</font></strong>;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}
+</pre>
+			</td></tr>
+			</table>		
+		</div>
+		
+		<div class="ms-section" id="left6">
+		<table  style='width:100%; padding-bottom:10%;'>
+			<tr><td style='padding:8%;'><h2>Do-While Example</h2></td></tr>
+			<tr><td style='padding-left:10%;'><h3 style='text-align:left;'>class DoWhileDemo</h3></td></tr>
+			<tr><td style='padding-left:10%;'>
+			<pre id="codel6Text"style='background:#FFFFFF; font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;'><strong><font color='#7f0055'>import</font></strong>&nbsp;java.util.Scanner;
+<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>class</font></strong>&nbsp;DoWhileDemo
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>static</font></strong>&nbsp;<strong><font color='#7f0055'>void</font></strong>&nbsp;main&nbsp;(String&nbsp;[]&nbsp;args)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>int</font></strong>&nbsp;count,&nbsp;number;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"Enter&nbsp;a&nbsp;number"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scanner&nbsp;keyboard&nbsp;=&nbsp;<strong><font color='#7f0055'>new</font></strong>&nbsp;Scanner&nbsp;(System.in);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;number&nbsp;=&nbsp;keyboard.nextInt&nbsp;();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count&nbsp;=&nbsp;1;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>do</font></strong>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print&nbsp;(count&nbsp;+&nbsp;<font color='#2a00ff'>",&nbsp;"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count++;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>while</font></strong>&nbsp;(count&nbsp;<=&nbsp;number);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"Buckle&nbsp;my&nbsp;shoe."</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}</pre>
+			</td></tr>
+			</table>	
+		</div>
+		
+		<div class="ms-section" id="left7">
+		<table  style='width:100%; padding-bottom:10%;'>
+			<tr><td style='padding:10%;'><h2>Scanner Example(Cont.)</h2></td></tr>
+			<tr><td style='padding-left:10%;'><h3 style='text-align:left;'>class ScannerDemo</h3></td></tr>
+			<tr><td style='padding-left:10%;'>
+			<pre id="codel7Text"style='background:#FFFFFF; font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;'><strong><font color='#7f0055'>import</font></strong>&nbsp;java.util.Scanner;
+<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>class</font></strong>&nbsp;DoWhileDemo
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>static</font></strong>&nbsp;<strong><font color='#7f0055'>void</font></strong>&nbsp;main&nbsp;(String&nbsp;[]&nbsp;args)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>int</font></strong>&nbsp;count,&nbsp;number;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"Enter&nbsp;a&nbsp;number"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scanner&nbsp;keyboard&nbsp;=&nbsp;<strong><font color='#7f0055'>new</font></strong>&nbsp;Scanner&nbsp;(System.in);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;number&nbsp;=&nbsp;keyboard.nextInt&nbsp;();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count&nbsp;=&nbsp;1;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>do</font></strong>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.print&nbsp;(count&nbsp;+&nbsp;<font color='#2a00ff'>",&nbsp;"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count++;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>while</font></strong>&nbsp;(count&nbsp;<=&nbsp;number);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"Buckle&nbsp;my&nbsp;shoe."</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}</pre>
+		</td></tr>
+		</table>	
+		</div>		
+		<div class="ms-section" id="left8">
+		<table  style='width:100%; padding-bottom:10%;'>
+			<tr><td style='padding:10%;'><h2>For Loop Example</h2></td></tr>
+			<tr><td style='padding-left:10%;'><h3 style='text-align:left;'>class ForDemo</h3></td></tr>
+			<tr><td style='padding-left:10%;'>
+			<pre id="codel8Text" style='background:#FFFFFF; font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;'><strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>class</font></strong>&nbsp;ForDemo
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>static</font></strong>&nbsp;<strong><font color='#7f0055'>void</font></strong>&nbsp;main&nbsp;(String&nbsp;[]&nbsp;args)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>int</font></strong>&nbsp;countDown;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>for</font></strong>&nbsp;(countDown&nbsp;=&nbsp;3&nbsp;;&nbsp;countDown&nbsp;>=&nbsp;0&nbsp;;&nbsp;countDown--)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(countDown);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"and&nbsp;counting."</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"Blast&nbsp;off!"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}</pre>
+		</td></tr>
+		</table>
+		</div>	
+		
+		<div class="ms-section" id="left9">
+		<table  style='width:100%; padding-bottom:10%;'>
+			<tr><td style='padding:10%;'><h2>For Loop Example(Cont.)</h2></td></tr>
+			<tr><td style='padding-left:10%;'><h3 style='text-align:left;'>class ForDemo</h3></td></tr>
+			<tr><td style='padding-left:10%;'>
+			<pre id="codel9Text" style='background:#FFFFFF; font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;'><strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>class</font></strong>&nbsp;ForDemo
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>static</font></strong>&nbsp;<strong><font color='#7f0055'>void</font></strong>&nbsp;main&nbsp;(String&nbsp;[]&nbsp;args)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>int</font></strong>&nbsp;countDown;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>for</font></strong>&nbsp;(countDown&nbsp;=&nbsp;3&nbsp;;&nbsp;countDown&nbsp;>=&nbsp;0&nbsp;;&nbsp;countDown--)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(countDown);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"and&nbsp;counting."</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"Blast&nbsp;off!"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}</pre>
+		</td></tr>
+		</table>
+		</div>
+		
+		<div class="ms-section" id="left10">
+		<div class="fullscreen">
+			<h1>End of Chapter 4</h1><br>
+			<div id="download"><a href="../../title page.html">Home</a></div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="ms-right">
+		<div class="ms-section" id="right1">
+			<!--<h1>View sample program Listing 1.1</h1>-->	
+		</div>
+
+		<div class="ms-section" id="right2">
+		<table style='width:100%; padding-bottom:35%;'>
+			<tr><td style='padding:10%;'><h2>Deep look of class Grader</h2></td></tr>
+			<tr><td>
+			<pre id="coder2Text" style='font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000;'>
+	  if (score >= 90)
+	    grade = 'A';
+	<font color='#185427'>//the first if checks if the score is greater then or equal to 90
+	//if true, then it assign the parameter grade to 'A'</font>
+	  else if (score >= 80)
+	    grade = 'B';
+	<font color='#185427'>//else if(score >= 80)checks if the score is in the range of 80~89
+	//if true, then it assign the parameter grade to 'B'</font>
+	  else
+	    grade = 'F';
+	<font color='#185427'>//the last statement of the "else" checks all above conditions
+	//and when they all failed, the grade will be assign to 'F'</font>
+			</pre>
+			</td></tr>
+		</table>
+		</div>
+
+		<div class="ms-section" id="right3">
+			<table style='width:100%; padding-bottom:35%;'>
+			<tr><td style='padding:10%;'><h2>Output of Grader</h2></td></tr>
+			<tr><td><h3>sample output of Grader</h3></td></tr>
+			<tr><td><img id = "outputImager3" src="imgs/ifelseOutput.png" width="600" height="200"></td></tr>
+			</table>
+		</div>
+		
+		<div class="ms-section" id="right4">
+		<table style='width:100%; padding-bottom:15%;'>
+			<tr><td style='padding:8%;'><h2>Deep look  of class MultipleBirths</h2></td></tr>
+			<tr><td>
+			<pre id="coder4Text" style='font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000;'>
+	<font color='#185427'>// the switch checks if numberOfBabies matches following cases</font>
+	  switch (numberOfBabies)
+	  {
+		case 1:
+		  System.out.println ("Congratulations.");
+		  break;
+	<font color='#185427'>//if numberOfBabies matches cases 1, print "Congratulations."
+	//then the break here means quit the switch </font>
+		case 2:
+		  System.out.println ("Wow. Twins.");
+		  break;
+	<font color='#185427'>//if numberOfBabies matches cases 2, print "Wow. Twins."
+	//then the break here means quit the switch </font>
+		   :
+		   :
+		default:
+		  System.out.println ("I don't believe you.");
+		  break;
+	<font color='#185427'>//if numberOfBabies matches does not matches all cases
+	//then print "I don't believe you." and quit the switch </font>
+	  }
+			</pre>
+			</td></tr>
+		</table>
+		</div>
+		<div class="ms-section" id="right5">
+		<table style='width:100%; padding-bottom:30%;'>
+			<tr><td style='padding:8%;'><h2>Output of MultipleBirths</h2></td></tr>
+			<tr><td><h3>sample output of MultipleBirths</h3></td></tr>
+			<tr><td><img id = "outputImager5" src="imgs/MultipleBirthsOutput1.png" ></td></tr>
+			<tr><td><img id = "outputImager52" src="imgs/MultipleBirthsOutput2.png" ></td></tr>
+			</table>
+		
+		</div>
+		
+		<div class="ms-section" id="right6">
+		<table style='width:100%; padding-bottom:35%;'>
+		<tr><td style='padding:8%;'><h2>Deep Look of class DoWhileDemo</h2></td></tr>
+		<tr><td style='padding-left:5%;'>
+		<pre id="coder6Text" style='font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000;'>
+	do
+	{
+	  System.out.print (count + ", ");
+	  count++;
+	}
+	while(count <= number);
+	<font color='#185427'>// prints the value of count first
+	//then increment the count by 1 each time
+	//exit the while loop when count is greater the number</font>
+		</pre>
+		</td></tr>
+		</table>
+		</div>
+		
+		<div class="ms-section" id="right7">
+		<table style='width:100%; padding-bottom:25%;'>
+		<tr><td style='padding:10%;'><h2>Output of DoWhileDemo</h2></td></tr>
+		<tr><td><h3>sample output of DoWhileDemo</h3></td></tr>
+		<tr><td><img id="outputImager7" src="imgs/DoWhileDemoOutput.png" width="300" height="200"></td></tr>
+		</table>
+		</div>
+		
+		<div class="ms-section" id="right8">
+			<table style='width:100%; padding-bottom:15%;'>
+			<tr><td style='padding:8%;'><h2>Deep look  of class ForDemo</h2></td></tr>
+			<tr><td>
+			<pre id="coder8Text" style='font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000;'>
+		for (countDown = 3 ; countDown >= 0 ; countDown--)
+		{
+			System.out.println (countDown);
+			System.out.println ("and counting.");
+		}
+		<font color='#185427'>//start: countDown = 3
+		//condition: countDown >= 0
+		//then: countDown decrement by 1 after each loop
+		//loop contents inside the for loop until exit loop
+		//exit for loop when countDown < 0</font>
+</pre>
+			</td></tr>
+		</table>
+		</div>
+		
+		<div class="ms-section" id="right9">
+		<table style='width:100%; padding-bottom:10%;'>
+		<tr><td style='padding:10%;'><h2>Output of ForDemo</h2></td></tr>
+		<tr><td><h3>sample output of ForDemo</h3></td></tr>
+		<tr><td><img id="outputImager9" src="imgs/ForDemoOutput.png"></td></tr>
+		</table>
+		</div>
+		
+		<div class="ms-section" id="right10">
+		
+		</div>
+	</div>	
+</div>
+
+</body>
+</html>

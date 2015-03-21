@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<title>Java Tutorial Chapter 1</title>
+	<!--<meta name="author" content="Alvaro Trigo Lopez" />-->
+	<!--<meta name="description" content="multiscroll plugin by Alvaro Trigo. Create divided multi-scrolling pages with two splited vertical layouts or panels." />
+	<meta name="keywords"  content="multiscroll,jquery,alvaro,trigo,plugin,divided,splitscreen,screen,panels,layouts,vertical,split,splited" />
+	<meta name="Resource-type" content="Document" />-->
+
+	
+	<link rel="stylesheet" type="text/css" href="../jquery.multiscroll.css" />		
+	<link rel="stylesheet" type="text/css" href="Chapter1.css" />	
+	<link rel="stylesheet" media="screen and (max-width: 600px)" href="Chapter1.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript" src="../vendors/jquery.easings.min.js"></script>
+	<script type="text/javascript" src="../jquery.multiscroll.js"></script>
+
+	<script type="text/javascript">
+	
+        $(document).ready
+        (function(){
+            $('#myContainer').multiscroll({
+            	sectionsColor: ['#00A8F0', '#4BBFC3', '#4074A8', '#83D1FC'],
+            	anchors: ['first', 'second', 'third', 'fourth'],
+            	menu: '#menu',
+            	navigation: true,
+            	navigationTooltips: ['One', 'Two', 'Three', 'Four'],
+            	loopBottom: true,
+            	loopTop: true,
+				easing: 'easeOutBack'
+            });
+         changeCodeSize();
+         
+    
+        });
+        
+    function changeCodeSize()
+    {
+        changeOutputImageSize();
+        changeCode1Size();
+		changeCode2Size();
+        //changeCode2Size();
+        //changeCode3Size();
+    }
+    
+    function changeOutputImageSize()
+    {
+        var w = window.innerWidth / 2.5;
+        var h = w / 2.6;
+        
+        var elem = document.getElementById("outputImage");
+        elem.style.width = w + "px";
+        elem.style.height = h + "px";
+    }
+    
+    function changeCode1Size()
+    {
+        var w = window.innerWidth / 90;
+        var codeText = document.getElementById("code1Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+	function changeCode2Size()
+    {
+        var w = window.innerWidth / 90;
+        var codeText = document.getElementById("code2Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+	
+    /*
+    function changeCode2Size()
+    {
+        var w = window.innerWidth / 200;
+        var codeText = document.getElementById("code2Text");
+        codeText.style.fontSize = w + "px";
+        
+    }
+    */
+    </script>
+</head>
+
+<body onresize="changeCodeSize()">
+
+
+<ul id="menu">
+	<li data-menuanchor="first"><a href="#first">First slide</a></li>
+	<li data-menuanchor="second"><a href="#second">Second slide</a></li>
+	<li data-menuanchor="third"><a href="#third">Third slide</a></li>
+	<li data-menuanchor="fourth"><a href="#fourth">Fourth slide</a></li>
+</ul>
+
+<div id="myContainer">
+
+	<div class="ms-left">
+		<div class="ms-section" id="left1">
+			<div class="fullscreen">
+			<h1>Chapter 1</h1>
+			<br><br><br><br><br><br>
+			<h2>Introduction of Java</h2>
+			<img src="imgs/javaLogo.png" height="257" width="285">
+			</div>
+		</div>
+
+		<div class="ms-section" id="left2">
+		<table style='width:100%; padding-bottom:10%;'>
+		<tr><td style='padding:10%;'><h2>A First Java Application(Cont.)</h2></td></tr>
+		<tr><td style='padding-left:10%;'><h3 style='text-align:left;'>class FirstProgram</h3></td></tr>
+		<tr><td style='padding-left:10%;'>	
+<pre id = "code1Text"   style='background:#FFFFFF; font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;'><strong><font color='#7f0055'>import</font></strong>&nbsp;java.util.Scanner;
+<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>class</font></strong>&nbsp;FirstProgram
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>static</font></strong>&nbsp;<strong><font color='#7f0055'>void</font></strong>&nbsp;main&nbsp;(String&nbsp;[]&nbsp;args)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"Hello&nbsp;out&nbsp;there."</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"I&nbsp;will&nbsp;add&nbsp;two&nbsp;numbers&nbsp;for&nbsp;you."</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"Enter&nbsp;two&nbsp;whole&nbsp;numbers&nbsp;on&nbsp;a&nbsp;line:"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>int</font></strong>&nbsp;n1,&nbsp;n2;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scanner&nbsp;keyboard&nbsp;=&nbsp;<strong><font color='#7f0055'>new</font></strong>&nbsp;Scanner&nbsp;(System.in);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n1&nbsp;=&nbsp;keyboard.nextInt&nbsp;();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n2&nbsp;=&nbsp;keyboard.nextInt&nbsp;();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"The&nbsp;sum&nbsp;of&nbsp;those&nbsp;two&nbsp;numbers&nbsp;is"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(n1&nbsp;+&nbsp;n2);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}</pre></td></tr>
+		</table>
+		</div>
+
+		<div class="ms-section" id="left3">
+		<table style='width:100%; padding-bottom:10%;'>
+		<tr><td style='padding:10%;'><h2>A First Java Application(Cont.)</h2></td></tr>
+		<tr><td style='padding-left:10%;'><h3 style='text-align:left;'>class FirstProgram</h3></td></tr>
+		<tr><td style='padding-left:10%;'>	
+<pre id = "code2Text"   style='background:#FFFFFF; font-family: Courier New, Courier; font-size: 12pt; text-align:left; font-weight:bold; COLOR: #000000; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;'><strong><font color='#7f0055'>import</font></strong>&nbsp;java.util.Scanner;
+<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>class</font></strong>&nbsp;FirstProgram
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>public</font></strong>&nbsp;<strong><font color='#7f0055'>static</font></strong>&nbsp;<strong><font color='#7f0055'>void</font></strong>&nbsp;main&nbsp;(String&nbsp;[]&nbsp;args)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"Hello&nbsp;out&nbsp;there."</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"I&nbsp;will&nbsp;add&nbsp;two&nbsp;numbers&nbsp;for&nbsp;you."</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"Enter&nbsp;two&nbsp;whole&nbsp;numbers&nbsp;on&nbsp;a&nbsp;line:"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><font color='#7f0055'>int</font></strong>&nbsp;n1,&nbsp;n2;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scanner&nbsp;keyboard&nbsp;=&nbsp;<strong><font color='#7f0055'>new</font></strong>&nbsp;Scanner&nbsp;(System.in);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n1&nbsp;=&nbsp;keyboard.nextInt&nbsp;();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n2&nbsp;=&nbsp;keyboard.nextInt&nbsp;();
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(<font color='#2a00ff'>"The&nbsp;sum&nbsp;of&nbsp;those&nbsp;two&nbsp;numbers&nbsp;is"</font>);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println&nbsp;(n1&nbsp;+&nbsp;n2);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}</pre></td></tr>
+		</table>
+		</div>
+		
+		<div class="ms-section" id="left4">
+			<div class="fullscreen">
+			<h1>Chapter Video</h1>
+			<iframe width="560" height="315" src="http://www.youtube.com/embed/YDNu42HYpXQ" frameborder="0" allowfullscreen></iframe>
+			<br><div id="download"><a href="../../title page.html">Home</a></div>
+			</div>
+		</div>
+		
+	</div>
+	
+	<div class="ms-right">
+		<div class="ms-section" id="right1">
+			<!--<h1>View sample program Listing 1.1</h1>-->	
+		</div>
+
+		<div class="ms-section" id="right2">
+		<table style='width:100%'>
+			<tr><td style='padding:10%;'><h2>Deep Look of class FirstProgram</h2></td></tr>
+			<tr><td style='padding-left:10%;'>
+			<p>import java.util.Scanner;</p>
+			<p class="comments">//This line imports scanner class from java library</p>
+			<br>
+			<p>System.out.println ("Hello out there.");</p>
+			<p class="comments">//This line prints string "Hello out there."</p>
+			<br>
+			<p>int n1, n2;</p>
+			<p class="comments">//This line initialize n1 and n2 as an integer</p>
+			<br>
+			<p>Scanner keyboard = new Scanner (System.in);</p>
+			<p class="comments">//This line creates a Scanner object called keyboard</p>
+			<br>
+			<p>n1 = keyboard.nextInt ();</p>
+			<p class="comments">//This line reads an input as an integer type</p>
+			<p class="comments">//Then pass the keyboard object as an integer to n1</p>
+			<br>
+			<p>System.out.println (n1 + n2);</p>
+			<p class="comments">//This line prints sum of n1 + n2</p>
+			<br>
+			</td></tr>
+		</table>
+		</div>
+
+		<div class="ms-section" id="right3">
+			<table style='width:100%; padding-bottom:10%;'>
+			<tr><td style='padding:10%;'><h2>Output of FirstProgram</h2></td></tr>
+			<tr><td style='padding-left:10%;'><h3 style='text-align:left;'>Example Output for FirstProgram</h3></td></tr>
+			<tr><td><img id = "outputImage"src="imgs/FirstProgramOutput.png"></td></tr>
+			</table>
+			
+			
+			
+
+		</div>
+		
+		<div class="ms-section" id="right4">
+		
+		</div>
+		
+	</div>	
+</div>
+
+</body>
+</html>
